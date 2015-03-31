@@ -1,0 +1,12 @@
+assets
+config.core.php
+connectors
+core
+ht.access
+.htaccess
+index.php
+manager
+setup*
+.sass-cache
+*.sublime-*
+
