@@ -9,4 +9,4 @@ manager
 setup*
 .sass-cache
 *.sublime-*
-
+config.codekit
