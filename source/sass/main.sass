@@ -1,0 +1,115 @@
+@import "bourbon"
+@import "default-styles/_normalize"
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import "default-styles/_boilerplate_styles"
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import "default-styles/_variables"
+@import "default-styles/_mixins"
+@import "default-styles/_general"
+
+@import "custom-styles/desktop/home"
+@import "custom-styles/desktop/contact"
+@import "custom-styles/desktop/privacy-policy"
+@import "custom-styles/desktop/events"
+@import "custom-styles/desktop/photography"
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+@import "default-styles/_helper_classes"
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* ==========================================================================
+   iPhone 3GS/4/4S Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 480 ))
+    /* Style adjustments for viewports that meet the condition */
+
+/* ==========================================================================
+   iPhone 5/5S Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 568, 16 ))
+    /* Style adjustments for viewports that meet the condition */
+
+/* ==========================================================================
+   iPhone 5/5S Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 568, 16 )) and (orientation:landscape)
+    /* Style adjustments for viewports that meet the condition */
+
+/* ==========================================================================
+   iPhone 6 Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 667, 16 ))
+
+/* ==========================================================================
+   iPhone 6 Plus Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 736, 16 ))
+    @import "default-styles/_general_mobile"
+
+    @import "custom-styles/mobile/home_mobile"
+    @import "custom-styles/mobile/contact-mobile"
+    @import "custom-styles/mobile/privacy-policy-mobile"
+    @import "custom-styles/mobile/events-mobile"
+    @import "custom-styles/mobile/photography-mobile"
+
+@media only screen and (max-width: em( 736, 16 )) and (orientation:landscape)
+    @import "default-styles/_general_mobile_landscape"
+
+    @import "custom-styles/mobile/photography-mobile_landscape"
+
+/* ==========================================================================
+   iPad
+   ========================================================================== */
+@media only screen and (max-width: em( 1023, 16 ))
+
+/* ==========================================================================
+   iPad Portrait Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 1023, 16 )) and (orientation:portrait)
+    @import "default-styles/_general_mobile"
+
+    @import "custom-styles/mobile/home_mobile"
+    @import "custom-styles/mobile/contact-mobile"
+    @import "custom-styles/mobile/privacy-policy-mobile"
+    @import "custom-styles/mobile/events-mobile"
+    @import "custom-styles/mobile/photography-mobile"
+
+/* ==========================================================================
+   iPad Landscape Orientation
+   ========================================================================== */
+@media only screen and (max-width: em( 1023, 16 )) and (orientation:landscape)
+
+/* ==========================================================================
+   Desktop High Resolution
+   ========================================================================== */
+@media only screen and (min-width: em( 1919, 16 ))
+    //@import "default-styles/_general_hd"
+    //@import "custom-styles/desktop/home_hd"
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@import "default-styles/_print_stylesheet"

@@ -1,0 +1,36 @@
+@mixin font-mask ( $weight: normal, $size: em( 16, 16 ), $height: 1.5em, $family: $helvetica, $color: #000 )
+    color: $color
+    font:
+        family: $family
+        size: $size
+        weight: $weight
+    line-height: $height
+@mixin putYellowBorder ( $weight: 1px, $type: solid, $color: $image-border )
+    border: $weight $type $color
+@mixin magicFigcaption ( $background-color: $figcaption-background, $bottom: 5px, $height: 24px, $width: 99.99% )
+    background-color: $background-color
+    display: block
+    bottom: $bottom
+    height: $height
+    left: 0
+    position: absolute
+    width: $width
+@mixin magicFigcaptionText ( $margin: 0, $indent: 4px, $transform: uppercase )
+    margin: $margin
+    text:
+        indent: $indent
+        transform: $transform
+@mixin roundedButton ()
+    @include font-mask( normal, em( 15, 16  ), 1em, $font, $image-border )
+    border-radius: 30px
+    border: 2px solid $image-border
+    padding: 10px 25px
+    text-decoration: none
+    text-transform: uppercase
+@mixin triangle ( $colorTop, $styleTop, $widthTop, $colorRight, $styleRight, $widthRight, $colorBottom, $styleBottom, $widthBottom, $colorLeft, $styleLeft, $widthLeft )
+    border:
+        color: $colorTop $colorRight $colorBottom $colorLeft
+        style: $styleTop $styleRight $styleBottom $styleLeft
+        width: $widthTop $widthRight $widthBottom $widthLeft
+    box-sizing: border-box
+    display: block

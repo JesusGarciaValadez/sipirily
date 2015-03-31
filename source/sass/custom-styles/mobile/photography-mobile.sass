@@ -1,0 +1,141 @@
+.photo
+    .wrapper
+        z-index: 1
+        .central
+            h1
+                display: inline-block
+                float: left
+            .principal-photography
+                border: 0 none transparent
+                display: block
+                float: none
+                margin: 6.25vw auto 54.6875vw
+                position: relative
+                .navigator
+                    display: inline-block
+                    height: 15.625vw
+                    margin: ( -15.625vw / 2 ) 0 0
+                    padding: 0
+                    position: absolute
+                    top: 28.125vw
+                    width: 15.625vw
+                    z-index: 2
+                    li
+                        height: 100%
+                        list-style: none inside
+                        padding: 0
+                        width: 100%
+                        a
+                            height: 100%
+                            width: 100%
+                            .arrow-big
+                .prev
+                    left: 9.375vw
+                .next
+                    right: 9.375vw
+                figure
+                    border: 0 none transparent
+                    display: block
+                    height: auto
+                    margin: 0 auto
+                    width: 78.75vw
+                    img
+                        border: 1.5625vw solid $white-color
+                        box-sizing: border-box
+                        height: 52.5vw
+                        width: 78.75vw
+                    .display
+                        box-sizing: border-box
+                        display: block
+                        height: auto
+                        margin: 6.25vw auto 0
+                        position: relative
+                        width: 78.75vw
+                        p
+                            @include font-mask( normal, 4.375vw, 6.25vw, $asap-regular, $dark_green )
+                            box-sizing: border-box
+                            margin: 1.25vw
+                            width: auto
+            aside
+                border: 0
+                bottom: 0
+                box-sizing: border-box
+                display: flex
+                float: none
+                margin: 0
+                opacity: 0
+                padding: 0
+                position: fixed
+                transition: all 0.3s ease 0.3s
+                width: 100vw
+                z-index: 9
+                &.share
+                    opacity: 1
+                    transition: all 0.3s ease 0.3s
+                h2
+                    display: none
+                ul
+                    align-content: space-between
+                    height: 50px
+                    margin: 0
+                    padding: 0
+                    width: 100%
+                    z-index: 10
+                    .social-button
+                        align-self: center
+                        display: block
+                        float: left
+                        height: 100%
+                        margin: 0 !important
+                        width: 25%
+                        &:nth-child( 1 )
+                            background: #405A97
+                        &:nth-child( 2 )
+                            background: #D83735
+                        &:nth-child( 3 )
+                            background: #55A3DF
+                        &:nth-child( 5 )
+                            background: #757575
+                        a
+                            color: $dark_green
+                            display: flex
+                            height: 100%
+                            img, svg
+                                align-self: center
+                                box-shadow: 0 0 0 0 rgba(0,0,0,0.0)
+                                display: block
+                                float: none
+                                height: 9.375vw
+                                margin: 0 auto
+                                width: 9.375vw
+                            span
+                                display: none
+                                @include font-mask( normal, 4.375vw, 9.375vw, $asap-regular, $dark_green )
+                                margin: 0 0 0 6.25vw
+                form
+                    margin-top: 0
+                    fieldset
+                        .input
+                            @include font-mask( normal, 4.375vw, 9.375vw, $asap-regular, $placeholder-color )
+                            height: auto !important
+                            width: 100% !important
+                            input
+                                height: auto !important
+                                &.error
+                                    border: 1px solid red
+                                    box-shadow: 0 0 2px 0 red
+                        .email
+                            margin: 6.25vw 0
+                            width: 75vw
+                        .submit
+                            width: 26.5625vw
+                            .button
+                                height: auto
+                                margin: 0
+                                padding: 3.125vw 6.25vw
+                .alert
+                    bottom: 0.625vw
+                    margin: 0
+                    position: absolute
+                    right: 0
+                    width: 44.375vw

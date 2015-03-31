@@ -1,0 +1,460 @@
+$font-size: 16px
+html,body
+    background: url('../img/home/linen-yellow.jpg') repeat scroll 0 0 transparent
+    display: table
+    font-size: $font-size
+    height: 100%
+    width: 100%
+.header
+    background-color: $white-color
+    border-bottom: $dark-green solid 3px
+    box-sizing: border-box
+    header
+        box-sizing: border-box
+        display: block
+        height: 82px
+        margin: 0 auto
+        position: relative
+        transition: all 0.5s ease
+        z-index: 1
+        p
+            display: inline-block
+            float: left
+            height: 52px
+            margin: ( -52px / 2 ) auto 0
+            position: relative
+            transition: all 0.5s ease
+            text-indent: -2000em
+            top: 50%
+            width: 113px //11.77083%
+            .logo
+                color: transparent
+                display: block
+                height: 52px
+                overflow: hidden
+                position: relative
+                width: 113px
+                z-index: 5
+                span
+                    display: none
+                .logo-vector
+                    display: inline-block
+                    fill: red
+                    height: 52px
+                    width: 113px
+        .cell
+            color: $dark_green
+            float: right
+            font-size: em( 16, $font-size )
+            overflow: hidden
+            position: relative
+            width: 45px
+            z-index: 5
+            .icon
+                display: inline-block
+                width: 45px
+                height: 45px
+                fill: $dark_green
+            .icon-menu
+                /*fill: #fff210*/
+        .select
+            background-color: $white-color
+            box-sizing: border-box
+            display: inline-block
+            height: 46.341463415%
+            left: 25.104166667%
+            margin: ( -30px / 2 ) auto 0
+            position: absolute
+            top: 50%
+            width: 23.75%
+            .select_municipality
+                box-sizing: border-box
+                float: left
+                height: auto
+                margin: 0
+                max-height: 34.146341463vw
+                padding: 36px 0 0
+                position: relative
+                top: 0
+                width: 183px
+                z-index: 4
+                span
+                    @include font-mask( normal, em( 14, $font-size ), em( 36, 14 ), $asap-regular, $text-municipality )
+                    background: none
+                    border: 0 solid transparent
+                    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.50)
+                    cursor: pointer
+                    display: block
+                    height: 36px
+                    left: 0%
+                    margin: 0 auto
+                    text-align: center
+                    padding: 0
+                    position: absolute
+                    top: 0%
+                    width: 100%
+                    z-index: 5
+                .mask
+                    background-color: $white-color
+                    box-shadow: 0px 5px 3px 1px rgba(0,0,0,0.5)
+                    box-sizing: border-box
+                    display: inline-block
+                    height: 350px
+                    left: 0%
+                    margin: 0 auto
+                    overflow: auto
+                    opacity: 0
+                    position: absolute
+                    transition: all 0.1s ease
+                    top: 36px
+                    width: 100%
+                    &.active
+                        display: block !important
+                        transition: all 0.1s ease
+                        opacity: 1 !important
+                    .jspContainer
+                        @extend .clearfix
+                        overflow: hidden
+                        position: relative
+                        .jspPane
+                            @extend .clearfix
+                            //height: 100%
+                            position: absolute
+                            //width: 96% !important
+                            ul
+                                height: auto
+                                margin: 0
+                                padding: 0
+                                width: 100%
+                                z-index: 4
+                                li
+                                    border-color: transparent transparent #F6F6F6 transparent
+                                    border-style: solid
+                                    border-width: 0 0 1px 0
+                                    box-sizing: border-box
+                                    cursor: pointer
+                                    height: 35px
+                                    list-style: none inside
+                                    width: 100%
+                                    &:hover
+                                        background-color: #FCFCFC
+                                        color: #F89829
+                                    a
+                                        @include font-mask( normal, em( 14, $font-size ), em( 30, 14 ), $asap-regular, $text-municipality )
+                                        text-align: center
+                                        text-decoration: none
+                                        text-transform: capitalize
+                        .jspVerticalBar
+                            height: 100%
+                            position: absolute
+                            right: 0
+                            top: 0
+                            width: 8px
+                            .jspCap
+                                display: none
+                            .jspCapTop
+                            .jspCapBottom
+                            .jspTrack
+                                box-sizing: border-box
+                                cursor: pointer
+                                position: relative
+                                .jspDrag
+                                    background: $light-green
+                                    cursor: pointer
+                                    left: 0
+                                    position: relative
+                                    top: 0
+                                    div
+                                        display: none
+                                    .jspDragTop
+                                    .jspDragBottom
+            button
+                background-color: $light-green
+                box-sizing: border-box
+                box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50)
+                border: 0 none transparent
+                border-radius: 3px
+                display: inline-block
+                float: left
+                height: 30px
+                margin: 4px 0 0 15px
+                position: relative
+                width: 30px
+                .arrow-down
+                    bottom: 0
+                    display: inline-block
+                    height: 14px
+                    left: 0
+                    margin: auto
+                    position: absolute
+                    right: 0
+                    top: 0
+                    width: 18px
+        ul
+            display: inline-block
+            float: right
+            height: 100%
+            margin: 0
+            padding: 0
+            width: auto
+            li
+                float: left
+                height: 100%
+                list-style: none inside
+                padding: 0
+                position: relative
+                width: 160px
+                &.current, &:hover
+                    background-color: #F5F5F5
+                &.current
+                    &:after
+                        @include triangle ( transparent, solid, 10px, transparent, solid, 10px, $dark-green, solid, 10px, transparent, solid, 10px )
+                        bottom: 0
+                        content: " "
+                        left: 50%
+                        margin: 0 0 0 ( -30px / 2 )
+                        position: absolute
+                a
+                    @include font-mask( normal, 16px, 82px, $asap-regular, $placeholder-color )
+                    display: block
+                    height: 100%
+                    text-align: center
+                    text-decoration: none
+                    width: 100%
+.banner
+    img
+        display: block
+        margin: 1.9512195122vw auto 0
+        width: 80.2734375%
+    figcaption
+        p
+            @include font-mask( normal, 1.07421875vw, 1.5em, $asap-regular, $text-normal )
+            margin: 1.5625vw auto
+            text-align: center
+            width: 93.75vw
+footer
+    background: $dark_green /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2YzQwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZWE4NGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+    // background: -moz-linear-gradient(top, $light_green 0%, $dark_green 100%) /* FF3.6+ */
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$light_green), color-stop(100%,$dark_green)) /* Chrome,Safari4+ */
+    // background: -webkit-linear-gradient(top, $light_green 0%,$dark_green 100%) /* Chrome10+,Safari5.1+ */
+    // background: -o-linear-gradient(top, $light_green 0%,$dark_green 100%) /* Opera 11.10+ */
+    // background: -ms-linear-gradient(top, $light_green 0%,$dark_green 100%) /* IE10+ */
+    // background: linear-gradient(to bottom, $light_green 0%,$dark_green 100%) /* W3C */
+
+    bottom: 0
+    box-sizing: border-box
+    clear: both
+    height: 25px
+    margin: 0
+    padding: 0
+    position: relative
+    width: 100%
+    p
+        @include font-mask( normal, 0.9375vw, em( 25, 9 ), $asap-bold, $white-color )
+        margin: 0
+        text-align: center
+.lt-ie9,.lt-ie8,.lt-ie7
+    .gradient
+        filter: none
+.desktop
+.mobile
+    display: none
+.central
+    display: block
+    margin: 0 auto
+    width: 93.75vw
+    .B_crumbBox
+        @include font-mask( normal, 1.953125vw, 2.24609375vw, $asap-regular, $text-normal )
+        clear: left
+        display: block
+        float: left
+        margin: 0 0 15px
+        overflow: hidden
+        padding: 0
+        text-overflow: ellipsis
+        width: 66%
+        white-space: nowrap
+        li
+            display: inline-block
+            list-style: none inside
+            a
+                color: $text-normal
+                text-decoration: none
+                span
+        .slash_crumb
+            @include font-mask( normal, 1.953125vw, 2.24609375vw, $asap-regular, $text-normal )
+            &:nth-child( 1n )
+                display: none
+            &:nth-child( 1n + 3 )
+                display: inline
+        .B_firstCrumb
+            display: none
+        .B_homeCrumb
+        .B_crumb
+        .B_lastCrumb
+        .B_currentCrumb
+            @include font-mask( normal, 1.953125vw, 2.24609375vw, $asap-regular, $text-normal )
+.page
+    h1
+        @include font-mask( normal, 2.34375vw, 2.63671875vw, $asap-bold, $dark-green )
+    section
+        p
+            @include font-mask( normal, 1.26953125vw, 1.85546875vw, $asap-regular, $text-normal )
+label
+    @include font-mask( normal, 1.953125vw, 2.24609375vw, $asap-regular, $dark_green )
+    clear: both
+    display: block
+input[type="text"], input[type="email"]
+    @include font-mask( normal, 1.3671875vw, 1.5625vw, $asap-regular, $placeholder-color )
+    border: 0 none transparent
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.50)
+    box-sizing: border-box
+    display: block
+    float: left
+    display: block
+    padding: 0 1.5625vw
+input[type="text"], input[type="email"], textarea
+    &:invalid, &.error
+        box-shadow: 0 0 3px 0 red !important
+*[placeholder], input[placeholder], input::-moz-placeholder,
+input:-moz-placeholder, input::-webkit-input-placeholder, input:-ms-input-placeholder
+    //@include font-mask( normal, 1.3671875vw, 1.5625vw, $asap-regular, $placeholder-color )
+    color: transparent
+    display: none
+    text-overflow: ellipsis
+.button
+    @include font-mask( normal, 1.3671875vw, 1.7578125vw, $asap-regular, $white-color )
+    background: $light_green
+    border: 0 none transparent
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.50)
+    box-sizing: border-box
+    padding: 0.48828125vw 0.9765625vw
+    &:hover
+        // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2YzQwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MWEzMzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+        // background: -moz-linear-gradient(top,  $light-green 0%, $shadow-button 100%) /* FF3.6+ */
+        // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$light-green), color-stop(100%,$shadow-button)) /* Chrome,Safari4+ */
+        // background: -webkit-linear-gradient(top,  $light-green 0%,$shadow-button 100%) /* Chrome10+,Safari5.1+ */
+        // background: -o-linear-gradient(top,  $light-green 0%,$shadow-button 100%) /* Opera 11.10+ */
+        // background: -ms-linear-gradient(top,  $light-green 0%,$shadow-button 100%) /* IE10+ */
+        // background: linear-gradient(to bottom,  $light-green 0%,$shadow-button 100%) /* W3C */
+        // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-green', endColorstr='$shadow-button',GradientType=0 ) /* IE6-8 */
+        background-color: $shadow-button
+    &:active, &:visited
+        // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2YzQwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MWEzMzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+        // background: -moz-linear-gradient(top,  $light-green 0%, $shadow-button-active 100%) /* FF3.6+ */
+        // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$light-green), color-stop(100%,$shadow-button-active)) /* Chrome,Safari4+ */
+        // background: -webkit-linear-gradient(top,  $light-green 0%,$shadow-button-active 100%) /* Chrome10+,Safari5.1+ */
+        // background: -o-linear-gradient(top,  $light-green 0%,$shadow-button-active 100%) /* Opera 11.10+ */
+        // background: -ms-linear-gradient(top,  $light-green 0%,$shadow-button-active 100%) /* IE10+ */
+        // background: linear-gradient(to bottom,  $light-green 0%,$shadow-button-active 100%) /* W3C */
+        // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-green', endColorstr='$shadow-button-active',GradientType=0 ) /* IE6-8 */
+        background-color: $shadow-button-active
+        box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.50)
+    &:disabled
+        @include font-mask( normal, 1.26953125vw, 1.46484375vw, $asap-regular, $placeholder-color )
+        background: #D8D8D8
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.50)
+.alert
+    @include font-mask( normal, 1.953125vw, 2.24609375vw, $asap-regular, $white-color )
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.50)
+    box-sizing: border-box
+    display: none
+    float: right
+    margin: 1.95313vw 9.9609375vw 0 0
+    padding: 1.5625vw 1.953125vw
+    transition: all 0.5s ease
+    width: 31.25vw
+    &.visible
+        display: block
+        transition: all 0.5s ease
+    .info
+        display: inline-block
+        float: left
+        height: 2.34375vw
+        margin-right: 1.171875vw
+        width: 2.34375vw
+    p
+        @include font-mask( normal, 1.953125vw !important, 2.24609375vw !important, $asap-regular !important, $white-color !important )
+        float: left
+        margin: 0
+    &.success
+        background: $success-alert
+    &.fail
+        background: $fail-alert
+    &.info
+        background: $info-alert
+.year-picker-wrapper
+    display: inline-block
+    float: right
+    margin: 1.953125vw 0
+    p, .year-picker
+        @include font-mask( normal, 1.5625vw, 1.7578125vw, $asap-regular, $text-municipality )
+        float: left
+    p
+        margin: 0 0.87890625vw 0 0
+    .year-picker
+        margin: 0
+        padding: 0
+        li
+            float: left
+            padding: 0
+            list-style: none inside
+            a
+                color: $text-municipality
+                text-decoration: none
+            &.current
+                margin: 0 0 0 0.29296875vw
+                a
+                    color: $dark_green
+            &.separator
+                margin: 0 0.29296875vw
+.paging
+    float: right
+    margin: 0
+    width: 34%
+    .pageList
+        float: right
+        margin: 0
+        padding: 0
+        li
+            background: #F5F5F5
+            box-sizing: border-box
+            display: inline-block
+            float: left
+            height: 3.3203125vw
+            margin: 0 0.390625vw 0
+            width: 3.3203125vw
+            &:first-child
+                margin: 0 0.390625vw 0 0
+            &:last-child
+                margin: 0 0 0 0.390625vw
+            a
+                @include font-mask( normal, 1.3671875vw, 3.3203125vw, $asap-bold, $placeholder-color )
+                display: block
+                height: 100%
+                text-align: center
+                text-decoration: none
+                width: 100%
+                .arrow
+                    height: 100%
+                    fill: $placeholder-color
+                    width: 100%
+            &.current
+                background: $light-green
+                a
+                    color: $white-color
+.return
+    clear: both
+    display: block
+    float: left
+    margin: 0
+    text-decoration: none
+    width: auto
+    & ~ div,& ~ section,& ~ article
+        clear: left
+        float: left
+.wrapper
+    display: table
+    width: 100%
