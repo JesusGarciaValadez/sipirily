@@ -1,9 +1,11 @@
 assets
+bower_components
 config.core.php
 connectors
 core
 ht.access
 .htaccess
+.DS_Store
 index.php
 manager
 setup*
