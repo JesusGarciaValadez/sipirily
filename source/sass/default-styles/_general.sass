@@ -10,28 +10,89 @@ html,body
 .central
     display: block
     margin: 0 auto
-    width: 93.75vw
+    width: 960px
 .button
+    box-sizing: border-box
+    display: inline-block
+    padding: 10px 20px
+    text-transform: uppercase
 .purple
+    background-color: $purple-button
 .green
+    background-color: $green-section
 .yellow
+    background-color: $yellow-background
 .border-white
+    border: 3px solid $white-color
 .border-blue
+    border: 3px solid $blue-border
+.border-purple
+    border: 3px solid $purple-border
+.browser
+    color: transparent
 .wrapper-header
     header
+        box-sizing: border-box
+        padding: 20px 0
         a
-            img
+            color: transparent
         nav
+            float: right
             ul
+                display: flex
+                margin: 0
+                padding: 0
                 li
+                    align-self: flex-start
+                    box-sizing: border-box
+                    height: 115px
+                    list-style: none outside
+                    width: 70px
                     a
+                        @include font-mask( normal, em( 13, 16 ), 1.2em, $helvetica, $menu-item-color )
+                        box-sizing: border-box
+                        display: block
+                        height: 100%
+                        padding: 1em 0 0
+                        text-align: center
+                        text-decoration: none
+                        width: 100%
+                        &:hover
+                            background-color: $menu-item-background
+                        &:before
+                            clear: both
+                            content: ""
+                            display: block !important
+                            margin: 0 auto
+                            position: relative
                         &[alt="Home"]
+                            &:before
+                                @extend .mono-home
+                                margin-bottom: em( 25, 13 )
                         &[alt="Sucursales"]
-                        &[alt="Paquetes & Promos"]
+                            &:before
+                                @extend .icono-sucursales
+                                margin-bottom: em( 27, 13 )
+                        &[alt^="Paquete"]
+                            &:before
+                                @extend .mono-paquetes-y-promos
+                                margin-bottom: em( 12, 13 )
                         &[alt="Sipirily Media"]
-                        &[alt="Bolsa de Trabajo"]
+                            &:before
+                                @extend .mono-media
+                                margin-bottom: em( 21, 13 )
+                        &[alt^="Bolsa"]
+                            &:before
+                                @extend .mono-bolsatrabajo
+                                margin-bottom: em( 30, 13 )
                         &[alt="Sipirily"]
+                            &:before
+                                @extend .mono-sipirily
+                                margin-bottom: em( 25, 13 )
                         &[alt="Contacto"]
+                            &:before
+                                @extend .mono-contacto
+                                margin-bottom: em( 33, 13 )
 google-map
     google-map-marker
         img
@@ -65,80 +126,7 @@ google-map
         p
             a
 a[title="Subir"]
-.home
-    .wrapper-gallery
-        .gallery
-            .scrollable
-                .items
-                    article
-                        h1
-                        a
-                .navigator
-    .wrapper-know-our-branches
-        .know-our-branches
-            h2
-            span
-                img
-            a
-    .wrapper-welcome-yo-sipirily-land
-        .welcome-to-sipirily-land
-            h3
-            p
-            ul
-                .character-small-
-                    p
-                        &.section-name
-                        &.section-description
-                    a.know-more
-    .wrapper-branch-hightlighted-video
-        section.central
-            ul
-                li
-                    a
-            .branch-hightlighted
-                h4
-                ul
-                    li
-                        p
-                            &.branch-name
-                            a
-                            .icon-arrow
-                    li
-                        p
-                            &.branch-name
-                            &.icon-arrow
-                            a
-                    .branch-hightlighted
-                        a
-                            .browser
-                            .prev
-                            .next
-                        .items
-                            figure
-                                img
-                        .thumbnails
-                            li
-                                figure
-                                    img
-            .video
-                video
-    .wrapper-meet-out-characters
-        .character-gallery
-            h4
-            a
-                &.browser
-                &.prev
-            .item
-                figure
-                    img
-            .next
-    .wrapper-blockquote
-        .blockquote
-            blockquote
-                .quote
-                quote
-                hr
-                p
-                    &.author
-        .navigator
-
+    bottom: 1.953125vw
+    color: transparent
+    position: fixed
+    right: 1.953125vw

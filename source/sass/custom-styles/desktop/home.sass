@@ -1,0 +1,162 @@
+.home
+    .wrapper-gallery
+        background: url("../img/home/carrusel/fondo.png") no-repeat scroll center center transparent
+        height: 600px
+        .gallery
+            height: 100%
+            .scrollable
+                height: 100%
+                overflow: hidden
+                position: relative
+                .items
+                    display: flex
+                    height: 75%
+                    position: absolute
+                    width: 2000em
+                    article
+                        align-self: stretch
+                        height: 100%
+                        text-align: center
+                        width: 960px
+                        h1
+                            @include font-mask( normal, em( 55, 16 ), 1.5em, $helvetica, $white-color )
+                            background-color: rgba( 0, 0, 0, 0.5 )
+                            display: block
+                            margin: 120px auto
+                            text-align: center
+                        a
+                            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $white-color )
+                            display: inline-block
+                            margin: 0 auto
+                            text-decoration: none
+                .navigator
+    .wrapper-know-our-branches
+        background-color: $green-section
+        .know-our-branches
+            display: flex
+            h2
+                @include font-mask( normal, em( 30, 16 ), em( 89, 30 ), $helvetica, $white-color )
+                align-self: flex-start
+                display: inline-block
+            span
+                align-self: center
+                margin-left: 70px
+            a
+                @include font-mask( normal, em( 16, 16 ), em( 16, 16 ), $helvetica, $white-color )
+                align-self: center
+                display: block
+                float: right
+                margin: 0px 0px 0px 250px
+                position: relative
+                text-decoration: none
+    .wrapper-welcome-yo-sipirily-land
+        background: url("../img/home/bienvenida/fondo.png") no-repeat scroll center center transparent
+        height: 702px
+        .welcome-to-sipirily-land
+            h3
+                @include font-mask( normal, em( 40, 16 ), 1.5em, $helvetica, $menu-item-background )
+                margin: 90px auto 20px
+                display: block
+                text-align: center
+            p
+                @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $blank-text )
+                display: block
+                margin: 0
+                text-align: center
+            ul
+                display: flex
+                margin: 1em auto
+                padding: 0
+                li
+                    align-self: stretch
+                    box-sizing: border-box
+                    list-style: none outside
+                    padding: 0 20px
+                    text-align: center
+                    &:nth-child( 3 )
+                        p.section-description
+                            margin: 1em auto 40px
+                        a.know-more
+                            padding: 10px
+                    p
+                        margin: 1em auto
+                        text-align: center
+                        &.section-name
+                            @include font-mask( normal, em( 25, 16 ), 1.5em, $helvetica, $menu-item-background )
+                        &.section-description
+                            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $blank-text )
+                    a.know-more
+                        @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $menu-item-background )
+                        text-decoration: none
+                        &:after
+                            content: ">"
+                            float: rigth
+                            margin-left: 5px
+                            position: relative
+    .wrapper-branch-hightlighted-video
+        section.central
+            ul
+                display: flex
+                margin: 0
+                padding: 0
+                li
+                    align-self: stretch
+                    list-style: none outside
+                    a
+            .branch-hightlighted
+                h4
+                ul
+                    display: flex
+                    margin: 0
+                    padding: 0
+                    li
+                        align-self: stretch
+                        list-style: none outside
+                        p
+                            &.branch-name
+                            a
+                            .map-icon
+                    .branch-hightlighted
+                        a
+                            .browser
+                            .prev
+                            .next
+                        .items
+                            figure
+                                img
+                        .thumbnails
+                            li
+                                figure
+                                    img
+            .video
+                video
+    .wrapper-meet-out-characters
+        .character-gallery
+            h4
+            a
+                &.browser
+                &.prev
+            .item
+                display: flex
+                figure
+                    align-self: stretch
+                    img
+            .next
+    .wrapper-blockquote
+        .blockquote
+            overflow: hidden
+            width: 93.75vw
+            .items
+                display: flex
+                width: 2000em
+                blockquote
+                    align-self: stretch
+                    margin: 0
+                    padding: 0
+                    width: 93.75vw
+                    .quote
+                    quote
+                    hr
+                    p
+                        &.author
+        .navigator
