@@ -1,6 +1,6 @@
 .home
     .wrapper-gallery
-        background: url("../img/home/carrusel/fondo.png") no-repeat scroll center center transparent
+        background: url("../img/home/carrusel/fondo.png") no-repeat fixed center center transparent
         height: 600px
         .gallery
             height: 100%
@@ -51,7 +51,7 @@
                 position: relative
                 text-decoration: none
     .wrapper-welcome-yo-sipirily-land
-        background: url("../img/home/bienvenida/fondo.png") no-repeat scroll center center transparent
+        background: url("../img/home/bienvenida/fondo.png") no-repeat fixed center center transparent
         height: 702px
         .welcome-to-sipirily-land
             h3
@@ -132,19 +132,55 @@
             .video
                 video
     .wrapper-meet-out-characters
+        background: url("../img/home/personajes/fondo.jpg") no-repeat fixed center center transparent
+        height: 580px
         .character-gallery
+            height: 100%
+            position: relative
             h4
+                @include font-mask( normal, em( 50, 16 ), 1.5em, $helvetica, $white-color )
+                margin: 20px auto
+                display: block
+                text-align: center
             a
                 &.browser
+                    @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+                    background: $yellow-background
+                    color: $white-color
+                    display: block
+                    height: 100px
+                    margin: ( -100px / 2 ) 0 0
+                    position: absolute
+                    text-align: center
+                    text-decoration: none
+                    top: 50%
+                    width: 60px
+                    z-index: 5
                 &.prev
-            .item
-                display: flex
-                figure
-                    align-self: stretch
-                    img
-            .next
+                    left: -120px
+                &.next
+                    right: -120px
+            .scrollable
+                height: 410px
+                overflow: hidden
+                position: relative
+                .item
+                    display: flex
+                    height: 100%
+                    position: absolute
+                    width: 2000em
+                    z-index: 1
+                    figure
+                        align-self: stretch
+                        height: 100%
+                        margin: 0 20px
+                        &:first-child
+                            margin: 0 20px 0 0
+                        &:last-child
+                            margin: 0 0 0 20px
+                        img
     .wrapper-blockquote
-        background: url("../img/home/testimoniales/fondo.jpg") no-repeat scroll center center transparent
+        background: url("../img/home/testimoniales/fondo.jpg") no-repeat fixed center center transparent
         height: 580px
         .blockquote
             height: 100%

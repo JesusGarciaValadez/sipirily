@@ -724,7 +724,8 @@ html, body {
   box-sizing: border-box;
   display: inline-block;
   padding: 10px 20px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-appearance: button; }
 
 .purple {
   background-color: #5D009E; }
@@ -734,6 +735,9 @@ html, body {
 
 .yellow {
   background-color: #FDE74D; }
+
+.blue {
+  background-color: #1694D6; }
 
 .border-white {
   border: 3px solid #FFFFFF; }
@@ -746,6 +750,8 @@ html, body {
 
 .browser {
   color: transparent; }
+  .browser.disabled {
+    display: none; }
 
 .wrapper-header header {
   box-sizing: border-box;
@@ -809,6 +815,132 @@ google-map {
   height: 350px;
   position: static !important; }
 
+.wrapper-contact {
+  background: url("../img/home/contacto/fondo-nubes.png") no-repeat scroll center top transparent; }
+  .wrapper-contact .contact-us h5 {
+    color: #1694D6;
+    font-family: Helvetica, Arial, "sans-serif";
+    font-size: 2.5em;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 60px auto 0;
+    display: block;
+    text-align: center; }
+  .wrapper-contact .contact-us p {
+    color: #AEAEAE;
+    font-family: Helvetica, Arial, "sans-serif";
+    font-size: 0.9375em;
+    font-weight: normal;
+    line-height: 1.5em;
+    display: block;
+    margin: 0;
+    text-align: center; }
+  .wrapper-contact .contact-us ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 80px auto 0;
+    padding: 0; }
+    .wrapper-contact .contact-us ul li {
+      -webkit-align-self: stretch;
+          -ms-flex-item-align: stretch;
+              align-self: stretch;
+      list-style: none outside;
+      width: 25%; }
+      .wrapper-contact .contact-us ul li p.title {
+        color: #1694D6;
+        font-family: Helvetica, Arial, "sans-serif";
+        font-size: 1.25em;
+        font-weight: normal;
+        line-height: 1.5em;
+        margin: 1em auto 0.65em; }
+      .wrapper-contact .contact-us ul li p a {
+        color: #877EB7;
+        text-decoration: none; }
+  .wrapper-contact .contact-us form {
+    display: block;
+    margin: 10px auto 0; }
+    .wrapper-contact .contact-us form fieldset {
+      float: left;
+      box-sizing: border-box;
+      padding: 0 10px;
+      width: 50%; }
+      .wrapper-contact .contact-us form fieldset input[type="text"], .wrapper-contact .contact-us form fieldset textarea {
+        color: #AEAEAE;
+        font-family: Helvetica, Arial, "sans-serif";
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.5em;
+        border: 1px solid #F0F0F0;
+        width: 100%; }
+      .wrapper-contact .contact-us form fieldset:nth-child(2) .input textarea {
+        height: 200px;
+        resize: unset; }
+      .wrapper-contact .contact-us form fieldset .input {
+        margin: 0 auto 35px;
+        width: 100%; }
+        .wrapper-contact .contact-us form fieldset .input input[type="text"] {
+          height: 40px; }
+    .wrapper-contact .contact-us form > .input {
+      -webkit-align-self: unset !important;
+          -ms-flex-item-align: unset !important;
+              align-self: unset !important;
+      clear: both;
+      display: block;
+      margin: 0 auto 50px; }
+      .wrapper-contact .contact-us form > .input input[type="submit"] {
+        color: #FFFFFF;
+        font-family: Helvetica, Arial, "sans-serif";
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.5em;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto; }
+        .wrapper-contact .contact-us form > .input input[type="submit"]:after {
+          content: ">";
+          float: rigth;
+          margin-left: 5px;
+          position: relative; }
+
+.wrapper-footer {
+  background: url("../img/home/footer/fondo-footer.png") no-repeat scroll center center transparent;
+  height: 240px; }
+  .wrapper-footer footer {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px 0 0; }
+    .wrapper-footer footer ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto 0;
+      padding: 0;
+      width: 174px; }
+      .wrapper-footer footer ul li {
+        -webkit-align-self: flex-start;
+            -ms-flex-item-align: start;
+                align-self: flex-start;
+        list-style: none outside;
+        margin: 0 10px 0 0; }
+        .wrapper-footer footer ul li:last-child {
+          margin-right: 0; }
+        .wrapper-footer footer ul li a {
+          color: transparent; }
+    .wrapper-footer footer p {
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, "sans-serif";
+      font-size: 0.9375em;
+      font-weight: normal;
+      line-height: 1.5em;
+      text-align: center; }
+      .wrapper-footer footer p a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none; }
+
 a[title="Subir"] {
   bottom: 1.953125vw;
   color: transparent;
@@ -816,7 +948,7 @@ a[title="Subir"] {
   right: 1.953125vw; }
 
 .home .wrapper-gallery {
-  background: url("../img/home/carrusel/fondo.png") no-repeat scroll center center transparent;
+  background: url("../img/home/carrusel/fondo.png") no-repeat fixed center center transparent;
   height: 600px; }
   .home .wrapper-gallery .gallery {
     height: 100%; }
@@ -896,7 +1028,7 @@ a[title="Subir"] {
       position: relative;
       text-decoration: none; }
 .home .wrapper-welcome-yo-sipirily-land {
-  background: url("../img/home/bienvenida/fondo.png") no-repeat scroll center center transparent;
+  background: url("../img/home/bienvenida/fondo.png") no-repeat fixed center center transparent;
   height: 702px; }
   .home .wrapper-welcome-yo-sipirily-land .welcome-to-sipirily-land h3 {
     color: #1694D6;
@@ -986,17 +1118,67 @@ a[title="Subir"] {
         -ms-flex-item-align: stretch;
             align-self: stretch;
     list-style: none outside; }
-.home .wrapper-meet-out-characters .character-gallery .item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .home .wrapper-meet-out-characters .character-gallery .item figure {
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch; }
+.home .wrapper-meet-out-characters {
+  background: url("../img/home/personajes/fondo.jpg") no-repeat fixed center center transparent;
+  height: 580px; }
+  .home .wrapper-meet-out-characters .character-gallery {
+    height: 100%;
+    position: relative; }
+    .home .wrapper-meet-out-characters .character-gallery h4 {
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, "sans-serif";
+      font-size: 3.125em;
+      font-weight: normal;
+      line-height: 1.5em;
+      margin: 20px auto;
+      display: block;
+      text-align: center; }
+    .home .wrapper-meet-out-characters .character-gallery a.browser {
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, "sans-serif";
+      font-size: 3.125em;
+      font-weight: normal;
+      line-height: 2em;
+      background: #FDE74D;
+      color: #FFFFFF;
+      display: block;
+      height: 100px;
+      margin: -50px 0 0;
+      position: absolute;
+      text-align: center;
+      text-decoration: none;
+      top: 50%;
+      width: 60px;
+      z-index: 5; }
+    .home .wrapper-meet-out-characters .character-gallery a.prev {
+      left: -120px; }
+    .home .wrapper-meet-out-characters .character-gallery a.next {
+      right: -120px; }
+    .home .wrapper-meet-out-characters .character-gallery .scrollable {
+      height: 410px;
+      overflow: hidden;
+      position: relative; }
+      .home .wrapper-meet-out-characters .character-gallery .scrollable .item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100%;
+        position: absolute;
+        width: 2000em;
+        z-index: 1; }
+        .home .wrapper-meet-out-characters .character-gallery .scrollable .item figure {
+          -webkit-align-self: stretch;
+              -ms-flex-item-align: stretch;
+                  align-self: stretch;
+          height: 100%;
+          margin: 0 20px; }
+          .home .wrapper-meet-out-characters .character-gallery .scrollable .item figure:first-child {
+            margin: 0 20px 0 0; }
+          .home .wrapper-meet-out-characters .character-gallery .scrollable .item figure:last-child {
+            margin: 0 0 0 20px; }
 .home .wrapper-blockquote {
-  background: url("../img/home/testimoniales/fondo.jpg") no-repeat scroll center center transparent;
+  background: url("../img/home/testimoniales/fondo.jpg") no-repeat fixed center center transparent;
   height: 580px; }
   .home .wrapper-blockquote .blockquote {
     height: 100%;
