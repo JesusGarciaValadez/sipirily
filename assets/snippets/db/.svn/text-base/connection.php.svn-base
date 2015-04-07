@@ -1,0 +1,9 @@
+<?php
+try {
+    $dbh = new PDO('mysql:host=localhost;dbname=Dell_incentivos', 'dellincetivos', 'KjsdR64as76');
+    $dbh->exec("SET CHARACTER SET utf8");    
+}
+catch ( PDOException $e ){
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
