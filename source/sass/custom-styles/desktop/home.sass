@@ -26,6 +26,7 @@
                             text-align: center
                         a
                             @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $white-color )
+                            cursor: pointer
                             display: inline-block
                             margin: 0 auto
                             text-decoration: none
@@ -143,20 +144,32 @@
                     img
             .next
     .wrapper-blockquote
+        background: url("../img/home/testimoniales/fondo.jpg") no-repeat scroll center center transparent
+        height: 580px
         .blockquote
-            overflow: hidden
-            width: 93.75vw
-            .items
-                display: flex
-                width: 2000em
-                blockquote
-                    align-self: stretch
-                    margin: 0
-                    padding: 0
-                    width: 93.75vw
-                    .quote
-                    quote
-                    hr
-                    p
-                        &.author
-        .navigator
+            height: 100%
+            margin: 0 auto
+            padding: 0
+            width: 960px
+            .quote
+                left: 50%
+                margin: 80px 0 0 -50px
+                position: absolute
+                width: 100px
+            quote
+                @include font-mask( normal, em( 32, 16 ), 1.5em, $helvetica, $white-color )
+                display: block
+                margin: 210px auto 0
+                text-align: center
+            hr
+                border: 0 none transparent
+                border-top: 1px solid $white-color
+                display: block
+                height: 0
+                margin: 50px auto 30px
+                width: 100px
+            p
+                @include font-mask( normal, em( 18, 16 ), 1.5em, $helvetica, $white-color )
+                margin: 1em auto
+                text-align: center
+                &.author

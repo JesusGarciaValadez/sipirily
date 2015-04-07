@@ -805,6 +805,10 @@ html, body {
           .wrapper-header header nav ul li a[alt="Contacto"]:before {
             margin-bottom: 2.5384615385em; }
 
+google-map {
+  height: 350px;
+  position: static !important; }
+
 a[title="Subir"] {
   bottom: 1.953125vw;
   color: transparent;
@@ -851,6 +855,7 @@ a[title="Subir"] {
             font-size: 1em;
             font-weight: normal;
             line-height: 1.5em;
+            cursor: pointer;
             display: inline-block;
             margin: 0 auto;
             text-decoration: none; }
@@ -990,22 +995,43 @@ a[title="Subir"] {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
             align-self: stretch; }
-.home .wrapper-blockquote .blockquote {
-  overflow: hidden;
-  width: 93.75vw; }
-  .home .wrapper-blockquote .blockquote .items {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 2000em; }
-    .home .wrapper-blockquote .blockquote .items blockquote {
-      -webkit-align-self: stretch;
-          -ms-flex-item-align: stretch;
-              align-self: stretch;
-      margin: 0;
-      padding: 0;
-      width: 93.75vw; }
+.home .wrapper-blockquote {
+  background: url("../img/home/testimoniales/fondo.jpg") no-repeat scroll center center transparent;
+  height: 580px; }
+  .home .wrapper-blockquote .blockquote {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 960px; }
+    .home .wrapper-blockquote .blockquote .quote {
+      left: 50%;
+      margin: 80px 0 0 -50px;
+      position: absolute;
+      width: 100px; }
+    .home .wrapper-blockquote .blockquote quote {
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, "sans-serif";
+      font-size: 2em;
+      font-weight: normal;
+      line-height: 1.5em;
+      display: block;
+      margin: 210px auto 0;
+      text-align: center; }
+    .home .wrapper-blockquote .blockquote hr {
+      border: 0 none transparent;
+      border-top: 1px solid #FFFFFF;
+      display: block;
+      height: 0;
+      margin: 50px auto 30px;
+      width: 100px; }
+    .home .wrapper-blockquote .blockquote p {
+      color: #FFFFFF;
+      font-family: Helvetica, Arial, "sans-serif";
+      font-size: 1.125em;
+      font-weight: normal;
+      line-height: 1.5em;
+      margin: 1em auto;
+      text-align: center; }
 
 /* ==========================================================================
  *   Helper classes
