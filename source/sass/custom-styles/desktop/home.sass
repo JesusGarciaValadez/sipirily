@@ -1,6 +1,6 @@
 .home
     .wrapper-gallery
-        background: url("../img/home/carrusel/fondo.png") no-repeat fixed center center transparent
+        background: url("../img/home/carrusel/fondo.png") no-repeat scroll center center transparent
         height: 600px
         .gallery
             height: 100%
@@ -51,7 +51,7 @@
                 position: relative
                 text-decoration: none
     .wrapper-welcome-yo-sipirily-land
-        background: url("../img/home/bienvenida/fondo.png") no-repeat fixed center center transparent
+        background: url("../img/home/bienvenida/fondo.png") no-repeat scroll center center transparent
         height: 702px
         .welcome-to-sipirily-land
             h3
@@ -95,44 +95,131 @@
                             margin-left: 5px
                             position: relative
     .wrapper-branch-hightlighted-video
+        background: url("../img/home/destacados/fondo-estrellas.png") no-repeat scroll center center transparent
+        height: 694px
         section.central
-            ul
+            position: relative
+            > ul
                 display: flex
+                left: 0
                 margin: 0
                 padding: 0
+                position: absolute
+                top: 20px
+                z-index: 10
                 li
                     align-self: stretch
+                    background-color: $white-color
+                    box-sizing: border-box
+                    border-bottom: 1px solid $gray-text
                     list-style: none outside
+                    padding: 10px 20px
+                    position: relative
+                    top: 70px
                     a
-            .branch-hightlighted
-                h4
-                ul
-                    display: flex
-                    margin: 0
-                    padding: 0
-                    li
-                        align-self: stretch
-                        list-style: none outside
-                        p
-                            &.branch-name
-                            a
-                            .map-icon
-                    .branch-hightlighted
+                        color: $gray-text
+                        text-decoration: none
+                    &.active
+                        background-color: $menu-item-background
+                        &:before
+                            content: ""
+                            position: absolute
                         a
-                            .browser
-                            .prev
-                            .next
-                        .items
+                            color: $white-color
+            .branch-hightlighted
+                display: flex
+                position: relative
+                z-index: 5
+                .features, .photos
+                    align-self: stretch
+                    width: 50%
+                .features
+                    box-sizing: border-box
+                    padding: 20px
+                    h4
+                        @include font-mask( bold, em( 20, 16 ), 1.2em, $helvetica, $menu-item-background )
+                        margin: 150px 0 0
+                    ul
+                        margin: 0
+                        padding: 0
+                        li
+                            list-style: none outside
+                            .bullet
+                                background-color: $menu-item-background
+                                border-radius: 50%
+                                box-sizing: border-box
+                                float: left
+                                height: 60px
+                                margin: 10px 20px 0 0
+                                padding: 0
+                                position: relative
+                                width: 60px
+                            p
+                                @include font-mask( normal, em( 15, 16 ), 1em, $helvetica, $gray-text )
+                                margin: 5px 0
+                                padding: 0 0 0 80px
+                                &.branch-name
+                                    @include font-mask( normal, em( 20, 16 ), 1em, $helvetica, $menu-item-background )
+                                    margin: 0.875em 0
+                                &.map-holder
+                                    float: left
+                                    line-height: em( 75, 15 )
+                                    a
+                                        float: right
+                                        margin: 0 0 0 20px
+                                a
+                                    color: $gray-text
+                                    text-decoration: none
+                                .map-icon
+                .branch-hightlighted
+                    height: 510px
+                    overflow: hidden
+                    padding: 110px 0 0
+                    width: 510px
+                    a
+                        &.browser
+                            margin: ( -45px / 2 ) 0
+                            position: absolute
+                            top: 50%
+                        &.prev
+                            left: 0
+                        &.next
+                            right: 0
+                        &.disabled
+                            display: none
+                    .items
+                        clear: both
+                        display: flex
+                        height: 374px
+                        position: relative
+                        width: 2000em
+                        figure
+                            align-self: stretch
+                            img
+                    .thumbnails
+                        align-self: flex-start
+                        bottom: 0
+                        clear: both
+                        display: flex
+                        left: 0
+                        margin: 0
+                        padding: 0
+                        position: absolute
+                        width: 100%
+                        li
+                            align-self: stretch
+                            box-sizing: border-box
+                            list-style: none outside
+                            margin: 0 15px 0 0
+                            &:last-child
+                                margin-right: 0
                             figure
                                 img
-                        .thumbnails
-                            li
-                                figure
-                                    img
             .video
+                z-index: 5
                 video
     .wrapper-meet-out-characters
-        background: url("../img/home/personajes/fondo.jpg") no-repeat fixed center center transparent
+        background: url("../img/home/personajes/fondo.jpg") no-repeat scroll center center transparent
         height: 580px
         .character-gallery
             height: 100%
@@ -180,7 +267,7 @@
                             margin: 0 0 0 20px
                         img
     .wrapper-blockquote
-        background: url("../img/home/testimoniales/fondo.jpg") no-repeat fixed center center transparent
+        background: url("../img/home/testimoniales/fondo.jpg") no-repeat scroll center center transparent
         height: 580px
         .blockquote
             height: 100%
