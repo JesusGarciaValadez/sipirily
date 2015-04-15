@@ -1192,22 +1192,24 @@ a[title="Subir"] {
               .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .features ul li p a {
                 color: #AEAEAE;
                 text-decoration: none; }
-      .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted {
+      .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video {
         height: 510px;
         overflow: hidden;
         padding: 110px 0 0;
+        position: relative;
         width: 510px; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted a.browser {
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo a.browser, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video a.browser {
           margin: -22.5px 0;
           position: absolute;
-          top: 50%; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted a.prev {
+          top: 50%;
+          z-index: 10; }
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo a.prev, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video a.prev {
           left: 0; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted a.next {
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo a.next, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video a.next {
           right: 0; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted a.disabled {
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo a.disabled, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video a.disabled {
           display: none; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted .items {
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .items, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .items {
           clear: both;
           display: -webkit-box;
           display: -webkit-flex;
@@ -1216,11 +1218,19 @@ a[title="Subir"] {
           height: 374px;
           position: relative;
           width: 2000em; }
-          .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted .items figure {
+          .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .items figure, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .items div, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .items figure, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .items div {
             -webkit-align-self: stretch;
                 -ms-flex-item-align: stretch;
                     align-self: stretch; }
-        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted .thumbnails {
+            .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .items figure:hover:after, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .items div:hover:after, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .items figure:hover:after, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .items div:hover:after {
+              background: RGBA(86, 75, 155, 0.5);
+              border-radius: 50%;
+              content: "";
+              height: 50px;
+              position: absolute;
+              width: 50px;
+              z-index: 10; }
+        .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .thumbnails, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .thumbnails {
           -webkit-align-self: flex-start;
               -ms-flex-item-align: start;
                   align-self: flex-start;
@@ -1235,17 +1245,17 @@ a[title="Subir"] {
           padding: 0;
           position: absolute;
           width: 100%; }
-          .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted .thumbnails li {
+          .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .thumbnails li, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .thumbnails li {
             -webkit-align-self: stretch;
                 -ms-flex-item-align: stretch;
                     align-self: stretch;
             box-sizing: border-box;
             list-style: none outside;
             margin: 0 15px 0 0; }
-            .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .branch-hightlighted .thumbnails li:last-child {
+            .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .photo .thumbnails li:last-child, .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video .thumbnails li:last-child {
               margin-right: 0; }
-    .home .wrapper-branch-hightlighted-video section.central .video {
-      z-index: 5; }
+      .home .wrapper-branch-hightlighted-video section.central .branch-hightlighted .video {
+        display: none; }
 .home .wrapper-meet-out-characters {
   background: url("../img/home/personajes/fondo.jpg") no-repeat scroll center center transparent;
   height: 580px; }

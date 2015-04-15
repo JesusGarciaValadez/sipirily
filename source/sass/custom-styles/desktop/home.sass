@@ -171,16 +171,18 @@
                                     color: $gray-text
                                     text-decoration: none
                                 .map-icon
-                .branch-hightlighted
+                .photo, .video
                     height: 510px
                     overflow: hidden
                     padding: 110px 0 0
+                    position: relative
                     width: 510px
                     a
                         &.browser
                             margin: ( -45px / 2 ) 0
                             position: absolute
                             top: 50%
+                            z-index: 10
                         &.prev
                             left: 0
                         &.next
@@ -193,9 +195,21 @@
                         height: 374px
                         position: relative
                         width: 2000em
-                        figure
+                        figure, div
                             align-self: stretch
+                            &:hover:after
+                                background: RGBA(86, 75, 155, 0.5)
+                                border-radius: 50%
+                                content: ""
+                                height: 50px
+                                position: absolute
+                                width: 50px
+                                z-index: 10
                             img
+                        figure
+                            img
+                        div
+                            video
                     .thumbnails
                         align-self: flex-start
                         bottom: 0
@@ -215,9 +229,9 @@
                                 margin-right: 0
                             figure
                                 img
-            .video
-                z-index: 5
-                video
+                .video
+                    display: none
+                    video
     .wrapper-meet-out-characters
         background: url("../img/home/personajes/fondo.jpg") no-repeat scroll center center transparent
         height: 580px
