@@ -1,4 +1,6 @@
 assets/components
+assets/css
+assets/js
 bower_components
 config.core.php
 connectors
