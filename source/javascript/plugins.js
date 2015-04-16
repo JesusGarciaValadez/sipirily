@@ -66,7 +66,12 @@ jQuery.fn.centerHeight      = function(){
 };
 
 // Place any jQuery/helper plugins in here.
-// @codekit-prepend "vendor/jquery-2.1.3.js";
-// @codekit-prepend "vendor/jquery.mousewheel.js";
-// @codekit-prepend "vendor/jquery.jscrollpane.js";
-// @codekit-append "yourPhoto.js";
+// @codekit-prepend "vendor/jquery-1.8.3.min.js";
+// @codekit-prepend "vendor/overlay.js";
+// @codekit-prepend "vendor/overlay.apple.js";
+// @codekit-prepend "vendor/scrollable.js";
+// @codekit-prepend "vendor/scrollable.navigator.js";
+// @codekit-prepend "vendor/scrollable.autoscroll.js";
+// @codekit-prepend "vendor/tabs.js";
+// @codekit-prepend "vendor/tabs.slideshow.js";
+// @codekit-append "sipirily.js";

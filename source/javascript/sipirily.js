@@ -9,28 +9,28 @@
  */
 (function($, window, undefined) {
 
-    var _yourPhoto    = window._yourPhoto,
-    yourPhoto,
+    var _sipirily    = window._sipirily,
+    sipirily,
     // Use the correct document accordingly with window argument(sandbox)
     document    = window.document,
     location    = window.location,
     navigator   = window.navigator;
 
-    // Map over yourPhoto in case of overwrite
-    _yourPhoto  = window.yourPhoto;
+    // Map over sipirily in case of overwrite
+    _sipirily  = window.sipirily;
 
-    // Define a local copy of yourPhoto
-    yourPhoto = function() {
-        if(!(this instanceof yourPhoto)) {
+    // Define a local copy of sipirily
+    sipirily = function() {
+        if(!(this instanceof sipirily)) {
 
-            // The yourPhoto object is actually just the init constructor 'enhanced'
-            return new yourPhoto.fn.init();
+            // The sipirily object is actually just the init constructor 'enhanced'
+            return new sipirily.fn.init();
         }
-        return yourPhoto.fn.init();
+        return sipirily.fn.init();
     };
 
     //  Object prototyping
-    yourPhoto.fn = yourPhoto.prototype = {
+    sipirily.fn = sipirily.prototype = {
         /**
          *
          *  @function:  !constructor
@@ -39,7 +39,7 @@
          *
          */
         //  Método constructor
-        constructor:    yourPhoto,
+        constructor:    sipirily,
         /**
          *
          *  @function:  !init
@@ -49,59 +49,6 @@
          */
         //  !Método inicializador
         init:   function() {
-            if(!$('.jspScrollable').exists()) {
-                //  Crea las instancias de jScrollPane para los elementos que simulan
-                //  ser select tags
-                yourPhoto.makeScrollBar($('.select_municipality .mask'));
-            }
-            if('header .select') {
-                //  Trigger para emular el comportamiento de combo box
-                $('.select').on('click', 'button', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    $('nav.mask').toggleClass('active');
-                });
-                $('body').on('click', function(e) {
-                    e.stopPropagation();
-                    if($('nav.mask').hasClass('active')) {
-                        $('nav.mask').removeClass('active');
-                    }
-                });
-            }
-        },
-        /**
-         *
-         *  @function:  !makesUniform
-         *  @description:   Makes the uniform effect to radius and checkbox
-         *  @params jQuery selector.- A jQuery Selector
-         *  @see:   http://uniformjs.com/
-         *  @author: @_Chucho_
-         *
-         */
-        //  !Crea un efecto para poder dar estilos a los elementos checkbox,
-        //  radio, file y select
-        makesUniform:   function(selector) {
-            selector.uniform();
-        },
-        /**
-         *
-         *  @function:  makeScrollBar
-         *  @description:  Make jScrollPane where is needed
-         *  @params jQuery selector.- A jQuery Selector
-         *  @params Object options.- A JSON object with the options to make a
-         *                           target element a jScrollPane Element
-         *  @author: @_Chucho_
-         *  @see:   http://www.jscrollpane.kelvinluck.com/
-         *
-         */
-        //  !Crea un elemento jScrollPane.
-        makeScrollBar:  function(selector, options) {
-
-            var _options    =(options === undefined) ? {} : options;
-
-            // the element we want to apply the jScrollPane
-            selector.jScrollPane(_options);
         },
         /**
          *
@@ -158,28 +105,6 @@
         _validateDate:          function(dateToCheck) {
             return(!/Invalid|NaN/.test(new Date(dateToCheck).toUTCString())) ? true : false;
         },
-        resizePaginator:    function() {
-            var _childrensLength, _childrensWidth,
-                _childrensMargin, _childrensMarginTotal,
-                _paginatorWidthPX, _paginatorWidthVW,
-                _childrens;
-            _childrens              = $('.pageList li');
-            _childrensLength        = _childrens.length;
-            _childrensWidth         = _childrens.width();
-
-            //  Obtain a sample of the margin used for the items in paginator
-            //  And parse like an integer to strip px measurements
-            _childrensMargin        = Math.ceil(parseFloat(_childrens.eq(0).css('margin-right')));
-            //  Calculate the total of the margin used for all the items in paginator
-            _childrensMarginTotal   = _childrensMargin *((_childrensLength * 2) - 2);
-
-            //  Calculate the width in px
-            _paginatorWidthPX       =(_childrensLength * _childrensWidth) +(_childrensMarginTotal);
-
-            //  Make the calcule to translate in viewport width
-            _paginatorWidthVW       = _paginatorWidthPX /(window.innerWidth * 0.01);
-            $('.paging, .pageList').width(_paginatorWidthVW + 'vw');
-        },
         showAlert:          function(_class, _text) {
             $('.alert').addClass(_class);
             $('.alert p').text(_text);
@@ -193,7 +118,7 @@
                 $('input[text],input[text],textarea').val();
             });
         },
-        anchorMenu: function(selectorToApply, offsetTop, classToFix) {
+        anchorMenu: function( selectorToApply, offsetTop, classToFix ) {
             var _tool,_selector,_offsetTop,_classToFix;
             _tool           =(window.pageYOffset !== undefined) ? window.pageYOffset :(document.documentElement || document.body.parentNode || document.body).scrollTop;
             _selector       =(typeof(selectorToApply) == "undefined") ? "*" : selectorToApply;
@@ -207,15 +132,46 @@
                 _selector.removeClass(_classToFix);
             }
         },
+        /**
+         *
+         *  @function:  !managerTimelineFill
+         *  @description:   Carrousel inicializer
+         *  @params jQuery slider.- A jQuery Selector
+         *  @params String progressBar.- A class to add to target
+         *  @params Object ui.- An object with css properties to apply to the jQuery selector
+         *  @params Number leftOffset.- A number to indicate the duration of the animation
+         *  @params Number rightOffset.- A number to indicate the duration of the animation
+         *  @see:   http://jquerytools.org
+         *  @author: @_Chucho_
+         *
+         */
+        //  !Inicializador de un carrusel jQuery Tools
+        inicializeCarrousel:    function ( selector, optionsScrollable, optionsNavigator, optionsAutoscroll ) {
+
+            _selector       = ( typeof( selector )  == "undefined" ) ? "*" : selector;
+            _selector       = ( typeof( _selector ) == "object" )    ? _selector : $( _selector );
+
+            if( !optionsScrollable || optionsScrollable == {} ) {
+                optionsScrollable = {};
+            }
+            if( !optionsNavigator || optionsNavigator == {} ) {
+                optionsNavigator = {};
+            }
+            if( !optionsAutoscroll || optionsAutoscroll == {} ) {
+                optionsAutoscroll = {};
+            }
+
+            _selector.scrollable( optionsScrollable ).navigator( optionsNavigator ).autoscroll( optionsAutoscroll );
+        },
     };
 
-    // Give the init function the yourPhoto prototype for later instantiation
-    yourPhoto.fn.init.prototype = yourPhoto.fn;
+    // Give the init function the sipirily prototype for later instantiation
+    sipirily.fn.init.prototype = sipirily.fn;
 
-    yourPhoto = yourPhoto.fn;
+    sipirily = sipirily.fn;
 
-    // Expose yourPhoto to the global object
+    // Expose sipirily to the global object
 
-    window.yourPhoto  = yourPhoto;
+    window.sipirily  = sipirily;
 
 })(jQuery, window);
