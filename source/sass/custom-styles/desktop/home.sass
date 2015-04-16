@@ -31,6 +31,21 @@
                             margin: 0 auto
                             text-decoration: none
                 .navigator
+                    box-sizing: border-box
+                    display: flex
+                    left: 45%
+                    position: absolute
+                    top: 85%
+                    a
+                        align-self: stretch
+                        border: 1px solid $purple-border
+                        border-radius: 50%
+                        cursor: pointer
+                        height: 15px
+                        margin: 0 10px
+                        width: 15px
+                        &.active
+                            background-color: $link-color
     .wrapper-know-our-branches
         background-color: $green-section
         .know-our-branches
@@ -201,9 +216,12 @@
                                 background: RGBA(86, 75, 155, 0.5)
                                 border-radius: 50%
                                 content: ""
-                                height: 50px
+                                height: 200px
+                                margin: ( -200px / 2 ) 0 0 ( -200px / 2 )
                                 position: absolute
-                                width: 50px
+                                right: 50%
+                                top: 50%
+                                width: 200px
                                 z-index: 10
                             img
                         figure
@@ -248,6 +266,7 @@
                     @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
                     background: $yellow-background
                     color: $white-color
+                    cursor: pointer
                     display: block
                     height: 100px
                     margin: ( -100px / 2 ) 0 0

@@ -36,6 +36,16 @@ html,body
     &.disabled
         display: none
 .wrapper-header
+    background-color: $white-color
+    position: static
+    transition: all 0.5seg ease
+    &.fixed
+        left: 0
+        position: fixed
+        transition: all 0.5seg ease
+        top: 0
+        width: 100%
+        z-index: 10
     header
         box-sizing: border-box
         padding: 20px 0
@@ -106,6 +116,10 @@ google-map
     position: static !important
     google-map-marker
         img
+input[type="text"],input[type="email"],textarea
+    &.error
+        border: 1px solid red !important
+        box-shadow: 0 0 5px 0 rgba( 255, 0, 0, 0.8 )
 .wrapper-contact
     background: url("../img/home/contacto/fondo-nubes.png") no-repeat scroll center top transparent
     .contact-us
