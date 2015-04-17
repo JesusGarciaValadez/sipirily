@@ -1,17 +1,23 @@
 [[$head]]
-        <!-- Polyfill Web Components support for older browsers -->
-        <script src="[[++site_url]]assets/web-components/webcomponentsjs/webcomponents.min.js" type="text/javascript"></script>
         <!-- Import element -->
         <link rel="import" href="[[++site_url]]assets/web-components/google-map/google-map.html">
     </head>
     <body>
         <div class="wrapper clearfix contact" id="home">
 [[$header]]
+            <div class="wrapper-title">
+                <section class="clearfix title central">
+                    <h1>Nuestras Sucursales</h1>
+                </section>
+            </div>
 [[$contact]]
 [[$map]]
+
 [[$footer]]
             <a href="#home" target="_blank" title="Subir" class="boton-subir">Subir</a>
         </div>
 [[$scripts]]
+        <!-- Polyfill Web Components support for older browsers -->
+        <script src="[[++site_url]]assets/web-components/webcomponentsjs/webcomponents.min.js" type="text/javascript"></script>
     </body>
 </html>
