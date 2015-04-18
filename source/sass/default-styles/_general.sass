@@ -119,8 +119,12 @@ google-map
     overflow: hidden
     position: relative !important
     width: 100%
+    #map
+        z-index: 0
     google-map-marker
-        img
+        display: block
+        position: relative
+        z-index: 100
 input[type="text"],input[type="email"],textarea
     &.error
         border: 1px solid red !important
