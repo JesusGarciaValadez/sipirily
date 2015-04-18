@@ -35,6 +35,19 @@ html,body
     color: transparent
     &.disabled
         display: none
+.internal
+    .wrapper-title
+        .title
+            display: flex
+            height: 100%
+            h1
+                @include font-mask( normal, em( 50, 16 ), 1.5em, $helvetica, $white-color )
+                align-self: center
+                text-align: center
+                display: block
+                text-align: center
+                width: 100%
+
 .wrapper-header
     background-color: $white-color
     position: static
