@@ -3,13 +3,24 @@
                     <a href="[[++site_url]]" title="Inicio Sipirily" class="logo-sipirily">Sipirily</a>
                     <nav>
                         <ul class="clearfix">
-                            <li class="clearfix"><a href="[[++site_url]]" alt="Home" target="_blank" class="clearfix">Home</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Sucursales" target="_blank" class="clearfix">Sucursales</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Paquetes & Promos" target="_blank" class="clearfix">Paquetes<br />& Promos</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Sipirily Media" target="_blank" class="clearfix">Sipirily<br />Media</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Bolsa de <br />Trabajo" target="_blank" class="clearfix">Bolsa de <br />Trabajo</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Sipirily" target="_blank" class="clearfix">Sipirily</a></li>
-                            <li class="clearfix"><a href="[[++site_url]][[~]]" alt="Contacto" target="_blank" class="clearfix">Contacto</a></li>
+                            <li class="clearfix"><a href="[[++site_url]]" alt="Home" target="_blank" class="clearfix">Inicio</a></li>
+                            [[!getResources?
+                                &parents=`1`
+                                &resources=`6`
+                                &limit=`0`
+                                &depth=`0`
+                                &includeTVs=`1`
+                                &processTVs=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`0`
+                                &showHidden=`0`
+                                &includeContent=`0`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE menu-list-item.html`
+                                &tplCondition=`id`
+                                &conditionalTpls=`{"[[*id]]":"@FILE menu-list-current-item.html"}`
+                             ]]
                         </ul>
                     </nav>
                 </header>
