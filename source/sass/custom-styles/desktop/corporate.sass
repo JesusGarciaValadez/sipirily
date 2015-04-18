@@ -1,0 +1,131 @@
+.corporate
+    .wrapper-title
+        background: url( '../img/bolsa-de-trabajo/banner.png' ) no-repeat scroll center center transparent
+        height: 200px
+        .title
+            display: block
+            h1, h2
+                margin: 0 auto
+                text-align: center
+                width: 100%
+            h1
+                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+            h2
+                @include font-mask( normal, em( 25, 16 ), em( 100, 25 ), $helvetica, $white-color )
+    .wrapper-our-history
+        .our-history
+            display: flex
+            figure, .info
+                align-self: stretch
+                box-sizing: border-box
+                margin-top: 2em
+            figure
+                img
+                figcaption
+                    p.branch-name
+                        @include font-mask( normal, em( 20, 16 ), 1.5em, $helvetica, $link-color )
+                    p
+                        @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+                        margin: 1em auto
+                        padding: 0
+                        position: relative
+                        text-align: center
+                        width: 100%
+                        a
+                            @include font-mask( normal, em( 15, 13 ), 1.5em, $helvetica, $white-color )
+                            box-sizing: border-box
+                            float: right
+                            display: block
+                            height: 100%
+                            padding: 10px 30px 10px 20px
+                            text-align: left
+                            text-decoration: none
+                            width: auto
+                            &:after
+                                @include font-mask( normal, em( 15, 15 ), 1.5em, $helvetica, $white-color )
+                                content: ">"
+                                position: absolute
+                                right: 10px
+            .info
+                box-sizing: border-box
+                padding: 0 50px 50px
+                h2
+                    @include font-mask( normal, em( 30, 16 ), 1.5em, $helvetica, $menu-item-color )
+                    margin: 0 auto 1em
+                    text-align: center
+                hr
+                    border-top: 2px solid $menu-item-color
+                    display: block
+                    height: 0
+                    margin: 1em auto
+                    width: 10%
+                p
+                    @include font-mask( normal, em( 15, 16 ), 1.5em, $helvetica, $gray-text )
+                    margin: 5px auto
+                    text-align: justify
+    .wrapper-our-history
+        .our-history
+            .info
+                h3
+                    @include font-mask( normal, em( 30, 16 ), 1.5em, $helvetica, $menu-item-color )
+                    margin: 0 auto 1em
+                    text-align: center
+                hr
+                    border-top: 2px solid $menu-item-color
+                    display: block
+                    height: 0
+                    margin: 1em auto
+                    width: 10%
+                p
+                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                    margin: 1em auto
+                    padding: 0
+                    width: 100%
+            figure
+                img
+    .wrapper-our-philosophy-title
+        .our-philosophy-title
+            box-sizing: border-box
+            display: flex
+            padding: 20px
+            h4
+                @include font-mask( normal, em( 40, 16 ), 1.5em, $helvetica, $white-color )
+                align-self: center
+                display: block
+                margin: 0 auto
+                text-align: left
+                width: 100%
+    .wrapper-our-philosophy-info
+        background: url( '../img/corporativo/zona-de-comida.jpg' ) no-repeat scroll center bottom transparent
+        background-size: cover
+        .our-philosophy-info
+            box-sizing: border-box
+            padding: 25px 0 50px
+            p
+                @include font-mask( normal, em( 25, 16 ), 1.5em, $helvetica, $white-color )
+            ul
+                display: block
+                margin: 0
+                padding: 0
+                li
+                    box-sizing: border-box
+                    display: list-item
+                    float: left
+                    list-style: outside none
+                    margin: 10px auto
+                    padding: 0 0 0 30px
+                    position: relative
+                    width: 33.3%
+                    &:before
+                        content: ""
+                        border: 2px solid $white-color
+                        border-radius: 50%
+                        height: 20px
+                        left: 0px
+                        margin: ( -20px / 2 ) auto 0
+                        position: absolute
+                        top: 40%
+                        width: 20px
+                    p
+                        @include font-mask( normal, em( 25, 16 ), 1.5em, $helvetica, $white-color )
+                        margin: 0 auto
