@@ -1,0 +1,93 @@
+.branches
+    .wrapper-title
+        background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
+        height: 221px
+        .title
+            display: block
+            h1
+                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+                margin-top: 16px
+                text-align: center
+                width: 100%
+    .wrapper-branches
+        .branches-open
+            .branches-list, .branches-locations
+                box-sizing: border-box
+                padding: 20px
+            .branches-list
+                ul
+                    display: flex
+                    margin: 0 auto
+                    padding: 0
+                    width: 600px
+                    li
+                        align-self: stretch
+                        border-bottom: 1px solid $gray-text
+                        box-sizing: border-box
+                        list-style: none inside
+                        padding: 10px 20px
+                        a
+                            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                            text-align: center
+                            text-decoration: none
+                        &.active
+                            background-color: $menu-item-background
+                            position: relative
+                            &:after
+                                border-color: $menu-item-background transparent transparent
+                                border-style: solid
+                                border-width: 10px
+                                bottom: -21px
+                                content: ""
+                                height: 1px
+                                left: 50%
+                                margin: 0 0 0 ( -10px / 2 )
+                                position: absolute
+                                width: 1px
+                            a
+                                color: $white-color
+            .panes
+                position: relative
+                z-index: 5
+                .branches-locations
+                    display: block
+                    width: 100%
+                    .branch
+                        float: left
+                        margin: 1.5%
+                        width: 30%
+                        &:first-child, &:nth-child( 4 ), &:nth-child( 7 ), &:nth-child( 10 )
+                            margin: 1.5% 1.5% 1.5% 0
+                        &:nth-child( 3 ), &:nth-child( 6 ), &:nth-child( 9 ), &:nth-child( 12 )
+                            margin: 1.5% 0 1.5% 1.5%
+                        figure
+                            width: 100%
+                            img, figcaption
+                                width: 100%
+                            figcaption
+                                p
+                                    @include font-mask( normal, em( 12, 16 ), 1.5em, $helvetica, $gray-text )
+                                    a
+                                        color: $gray-text
+                                        text-decoration: none
+                                        &:hover
+                                            text-decoration: underline
+                                    &.branch-name
+                                        color: $menu-item-background
+                                        font-size: em( 16, 16 )
+                                    &.branch-info
+                                    &.branch-phone
+                                    &.branch-email
+                                    &.links
+                                        a
+                                            @include font-mask( bold, em( 9, 13 ), 1.5em, $helvetica, $menu-item-background )
+                                            border: 5px solid $menu-item-background
+                                            padding: 10px 14px
+                                            width: 47.5%
+                                            &:first-child
+                                                float: left
+                                                margin: 0 2.5% 0 0
+                                            &:last-child
+                                                float: right
+                                                margin: 0 0 0 2.5%
+
