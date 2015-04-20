@@ -1,0 +1,113 @@
+.promotions
+    .wrapper-title
+        background: url( '../img/promociones/banner.png' ) no-repeat scroll center center transparent
+        height: 200px
+        .title
+            display: block
+            h1, h2
+                margin: 0 auto
+                text-align: center
+                width: 100%
+            h1
+                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+            h2
+                @include font-mask( normal, em( 25, 16 ), em( 100, 25 ), $helvetica, $white-color )
+    .balloons-left, .balloons-right
+        position: absolute
+        top: 0
+    .balloons-left
+        background: url( '../img/promociones/globos-izquierda.png' ) no-repeat scroll left top transparent
+        height: 603px
+        left: 0
+        width: 276px
+    .balloons-right
+        background: url( '../img/promociones/globos-derecha.png' ) no-repeat scroll right top transparent
+        height: 680px
+        right: 0
+        width: 276px
+    .wrapper-platinum-plan, .wrapper-golden-plan
+        background: url( '../img/promociones/fondo-estrellas.png' ) no-repeat scroll center top transparent
+        box-sizing: border-box
+        padding: 20px 0
+        position: relative
+        h2
+            @include font-mask( normal, em( 50, 16 ), 1.5em, $helvetica, $menu-item-background )
+            margin: 50px auto 0
+            text-align: center
+        p
+            @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+            text-align: center
+        .platinum-plan, .golden-plan
+            box-sizing: border-box
+            display: flex
+            padding: 0 20px
+            .info, figure
+                align-self: stretch
+            .info
+                p
+                    &.includes
+                        color: $purple-button
+                        font-size: em( 16, 13 )
+                        text-align: left
+                        text-indent: 20px
+                    a
+                        float: right
+                ul
+                    li
+                        list-style: none outside url( '../img/promociones/bullet.png' )
+                        @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+            figure
+                img
+    .wrapper-platinum-plan
+        .platinum-plan
+            .info
+                padding: 0 0 0 120px
+            figure
+    .wrapper-separator
+        height: 50px
+    .wrapper-golden-plan
+        .golden-plan
+            figure
+                padding: 0 0 0 100px
+            .info
+    .wrapper-know-our-promotions
+        .know-our-promotions-title
+            h3
+                @include font-mask( normal, em( 30, 16 ), 1em, $helvetica, $white-color )
+    .wrapper-banner-our-promotions
+        .banner-our-promotions
+            position: relative
+            a
+                &.browser
+                    background: RGBA( 78, 186, 79, 0.5 )
+                    border-radius: 50%
+                    color: $white-color
+                    font-size: em( 60, 16 )
+                    height: 40px
+                    line-height: 40px
+                    position: absolute
+                    text-align: center
+                    top: 50%
+                    width: 40px
+                    z-index: 10
+                    &:hover
+                        background: RGBA( 78, 186, 79, 1 )
+                &.btn-prev
+                    left: 20px
+                &.btn-next
+                    right: 20px
+                .disabled
+                    display: none
+            .scrollable
+                height: 560px
+                overflow: hidden
+                position: relative
+                z-index: 5
+                .items
+                    display: flex
+                    height: 100%
+                    position: absolute
+                    width: 2000em
+                    figure
+                        align-self: stretch
+                        img
