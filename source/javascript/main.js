@@ -202,6 +202,18 @@
             });
         }
 
+        if ($('.branches').exists()) {
+            $('ul.tabs').tabs('div.panes > div');
+
+            $('ul.tabs').on( 'click', 'li', function ( e ) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('ul.tabs li').removeClass('active');
+                $(e.currentTarget).addClass('active');
+            } );
+        }
+
         /**
          *
          *  Anchor the menu when the screen is up to certain Y coord while doing scroll
