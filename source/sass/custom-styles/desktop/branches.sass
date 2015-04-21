@@ -1,4 +1,4 @@
-.branches
+.branches, .media
     .wrapper-title
         background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
         height: 221px
@@ -9,12 +9,13 @@
                 margin-top: 16px
                 text-align: center
                 width: 100%
-    .wrapper-branches
-        .branches-open
-            .branches-list, .branches-locations
+    .wrapper-branches, .wrapper-media
+        .branches-open, .media-open
+            .branches-list, .branches-locations,
+            .media-list, .media-locations
                 box-sizing: border-box
                 padding: 20px
-            .branches-list
+            .branches-list, .media-list
                 ul
                     display: flex
                     margin: 0 auto
@@ -46,15 +47,17 @@
                                 width: 1px
                             a
                                 color: $white-color
+            .media-list
+                ul
+                    width: 185px
             .panes
                 position: relative
                 z-index: 5
-                .branches-locations
+                .branches-locations, .media-locations
                     display: block
                     width: 100%
-                    .branch
+                    .branch, .media
                         float: left
-                        min-height: 436px
                         margin: 1.5%
                         width: 30%
                         &:first-child, &:nth-child( 4 ), &:nth-child( 7 ), &:nth-child( 10 )
@@ -114,4 +117,12 @@
                                             &:last-child
                                                 float: right
                                                 margin: 0 0 0 2.5%
+                    .branch
+                        min-height: 436px
+                    .media
+                        min-height: 200px
+                        div
+                            width: 100%
+                            img
+                                width: 100%
 
