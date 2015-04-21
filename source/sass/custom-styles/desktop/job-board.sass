@@ -9,9 +9,9 @@
                 text-align: center
                 width: 100%
             h1
-                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+                @include font-mask( normal, em( 55, 16 ), em( 100, 55 ), $helvetica, $white-color )
             h2
-                @include font-mask( normal, em( 25, 16 ), em( 100, 25 ), $helvetica, $white-color )
+                @include font-mask( normal, em( 18, 16 ), em( 100, 18 ), $helvetica, $white-color )
     .wrapper-our-vacancies
         .our-vacancies
             h3, p
@@ -22,9 +22,9 @@
             h3
                 @include font-mask( normal, em( 50, 16 ), 1.5em, $helvetica, $menu-item-background )
             p
-                @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+                @include font-mask( normal, em( 18, 16 ), 1.5em, $helvetica, $gray-text )
             h4
-                @include font-mask( normal, em( 30, 16 ), 1.5em, $helvetica, $menu-item-background )
+                @include font-mask( normal, em( 24, 16 ), 1.5em, $helvetica, $menu-item-background )
                 text-align: justify
             .wrapper-apply
                 width: 100%
@@ -32,8 +32,8 @@
                     background-color: $green-section
                     float: left
                     display: flex
-                    margin: 2.5%
-                    width: 45%
+                    margin: 1%
+                    width: 48%
                     .info, figure
                         align-self: stretch
                         width: 50%
@@ -51,13 +51,14 @@
                         h5
                             box-sizing: border-box
                             display: block
-                            font-size: em( 19, 16 )
+                            font-size: em( 20, 16 )
+                            font-weight: normal
                             margin: 0.5em auto
                             padding: 0 10px
                         p
                             box-sizing: border-box
                             display: block
-                            font-size: em( 13, 16 )
+                            font-size: em( 14, 16 )
                             margin: 0.5em auto
                             padding: 0 10px
                         ul
@@ -79,11 +80,11 @@
                                     border: 0 none transparent
                                 p
                                     display: block
-                                    font-size: em( 13, 16 )
+                                    font-size: em( 14, 16 )
                                     text-align: center
                                     width: 100%
                                     .vacancy-quantity,.vacancy-zone
-                                        font-size: em( 25, 16 )
+                                        font-size: em( 18, 16 )
                     figure
                         position: relative
                         img
@@ -98,17 +99,20 @@
                                 margin: 0
                                 padding: 0
                                 width: 100%
+                                &:after
+                                    content: none
                                 a
-                                    @include font-mask( normal, em( 15, 16 ), 1.5em, $helvetica, $white-color )
+                                    @include font-mask( normal, em( 14, 16 ), 1.5em, $helvetica, $white-color )
                                     box-sizing: border-box
                                     display: block
                                     height: 100%
                                     padding: 10px 30px 10px 20px
+                                    position: relative
                                     text-align: left
                                     text-decoration: none
                                     width: 100%
                                     &:after
-                                        @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $white-color )
+                                        @include font-mask( normal, em( 14, 16 ), em( 25, 14 ), $helvetica, $white-color )
                                         content: ">"
                                         position: absolute
                                         right: 10px
