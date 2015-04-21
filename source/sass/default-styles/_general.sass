@@ -62,7 +62,7 @@ html,body
             h2
                 text-transform: uppercase
 .wrapper-header
-    background-color: $white-color
+    background: url("../img/home/destacados/fondo-estrellas.png") no-repeat scroll center top $white-color
     position: static
     transition: all 0.5seg ease
     &.fixed
@@ -73,22 +73,27 @@ html,body
         width: 100%
         z-index: 10
     header
+        display: flex
         box-sizing: border-box
-        padding: 20px 0
+        height: 130px
+        padding: 0
         a
+            align-self: center
             color: transparent
         nav
             float: right
+            height: 100%
             ul
                 display: flex
+                height: 100%
                 margin: 0
                 padding: 0
                 li
                     align-self: flex-start
                     box-sizing: border-box
-                    height: 115px
+                    height: 100%
                     list-style: none outside
-                    width: 70px
+                    width: 100px
                     a
                         @include font-mask( normal, em( 13, 16 ), 1.2em, $helvetica, $menu-item-color )
                         box-sizing: border-box
