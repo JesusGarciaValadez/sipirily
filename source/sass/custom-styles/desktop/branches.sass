@@ -19,7 +19,7 @@
                     display: flex
                     margin: 0 auto
                     padding: 0
-                    width: 600px
+                    width: 680px
                     li
                         align-self: stretch
                         border-bottom: 1px solid $gray-text
@@ -27,7 +27,7 @@
                         list-style: none inside
                         padding: 10px 20px
                         a
-                            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                            @include font-mask( normal, em( 18, 16 ), 1.5em, $helvetica, $blank-text )
                             text-align: center
                             text-decoration: none
                         &.active
@@ -54,6 +54,7 @@
                     width: 100%
                     .branch
                         float: left
+                        min-height: 436px
                         margin: 1.5%
                         width: 30%
                         &:first-child, &:nth-child( 4 ), &:nth-child( 7 ), &:nth-child( 10 )
@@ -61,10 +62,28 @@
                         &:nth-child( 3 ), &:nth-child( 6 ), &:nth-child( 9 ), &:nth-child( 12 )
                             margin: 1.5% 0 1.5% 1.5%
                         figure
+                            height: 100%
+                            position: relative
                             width: 100%
                             img, figcaption
                                 width: 100%
+                            img
+                                & ~ a
+                                    @include font-mask( normal, em( 14, 16 ), 1.5em, $helvetica, $menu-item-background )
+                                    background: rgba( 255, 255, 255, 0.8 )
+                                    display: none
+                                    left: 50%
+                                    margin: 0 0 0 ( -115px / 2 )
+                                    padding: 10px 20px
+                                    position: absolute
+                                    text-decoration: none
+                                    top: 89.5px
+                                &:hover ~ a, & ~ a:hover
+                                    cursor: position
+                                    display: inline-block
+                                    text-decoration: underline
                             figcaption
+                                height: 230px
                                 p
                                     @include font-mask( normal, em( 12, 16 ), 1.5em, $helvetica, $gray-text )
                                     a
@@ -79,6 +98,10 @@
                                     &.branch-phone
                                     &.branch-email
                                     &.links
+                                        bottom: 0
+                                        margin: 0 auto
+                                        position: absolute
+                                        width: 100%
                                         a
                                             @include font-mask( bold, em( 9, 13 ), 1.5em, $helvetica, $menu-item-background )
                                             border: 5px solid $menu-item-background
