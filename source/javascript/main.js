@@ -202,7 +202,7 @@
             });
         }
 
-        if ($('.branches').exists()) {
+        if ($('.branches, .media').exists()) {
             $('ul.tabs').tabs('div.panes > div');
 
             $('ul.tabs').on( 'click', 'li', function ( e ) {
