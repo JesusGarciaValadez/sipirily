@@ -9,21 +9,21 @@
                 text-align: center
                 width: 100%
             h1
-                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+                @include font-mask( normal, em( 55, 16 ), em( 100, 55 ), $helvetica, $white-color )
             h2
-                @include font-mask( normal, em( 25, 16 ), em( 100, 25 ), $helvetica, $white-color )
+                @include font-mask( normal, em( 18, 16 ), em( 100, 18 ), $helvetica, $white-color )
     .balloons-left, .balloons-right
         position: absolute
         top: 0
     .balloons-left
         background: url( '../img/promociones/globos-izquierda.png' ) no-repeat scroll left top transparent
         height: 603px
-        left: 0
+        left: -50px
         width: 276px
     .balloons-right
         background: url( '../img/promociones/globos-derecha.png' ) no-repeat scroll right top transparent
         height: 680px
-        right: 0
+        right: -50px
         width: 276px
     .wrapper-platinum-plan, .wrapper-golden-plan
         background: url( '../img/promociones/fondo-estrellas.png' ) no-repeat scroll center top transparent
@@ -35,7 +35,7 @@
             margin: 50px auto 0
             text-align: center
         p
-            @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+            @include font-mask( normal, em( 18, 16 ), 1.5em, $helvetica, $blank-text )
             text-align: center
         .platinum-plan, .golden-plan
             box-sizing: border-box
@@ -46,29 +46,30 @@
             .info
                 p
                     &.includes
-                        color: $purple-button
-                        font-size: em( 16, 13 )
+                        color: $purple-text
+                        font-size: em( 18, 13 )
                         text-align: left
                         text-indent: 20px
                     a
+                        font-size: em( 14, 18 )
                         float: right
                 ul
                     li
                         list-style: none outside url( '../img/promociones/bullet.png' )
-                        @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
+                        @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $blank-text )
             figure
                 img
     .wrapper-platinum-plan
         .platinum-plan
             .info
-                padding: 0 0 0 120px
+                padding: 0 0 0 50px
             figure
     .wrapper-separator
         height: 50px
     .wrapper-golden-plan
         .golden-plan
             figure
-                padding: 0 0 0 100px
+                padding: 0 0 0 60px
             .info
     .wrapper-know-our-promotions
         .know-our-promotions-title
@@ -79,22 +80,13 @@
             position: relative
             a
                 &.browser
-                    background: RGBA( 78, 186, 79, 0.5 )
-                    border-radius: 50%
-                    color: $white-color
-                    font-size: em( 60, 16 )
-                    height: 40px
-                    line-height: 40px
+                    cursor: pointer
                     position: absolute
-                    text-align: center
                     top: 50%
-                    width: 40px
                     z-index: 10
-                    &:hover
-                        background: RGBA( 78, 186, 79, 1 )
-                &.btn-prev
+                &.btn-prev-green
                     left: 20px
-                &.btn-next
+                &.btn-next-green
                     right: 20px
                 .disabled
                     display: none
