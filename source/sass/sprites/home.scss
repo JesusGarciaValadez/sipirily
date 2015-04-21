@@ -1,6 +1,6 @@
 
 /* Start Sprite Master CSS */
-.icono-sucursales,.mono-bolsatrabajo,.mono-contacto,.mono-home,.mono-home,.mono-media,.mono-paquetes-y-promos,.mono-sipirily,.boton-subir,.icono-facebook,.icono-google,.icono-twitter,.icono-youtube,.icono-franquicias,.icono-invitaciones,.icono-paquetes,.icono-promociones,.btn-next,.btn-prev,.btn-hover,.btn-next,.btn-prev,.map-icon,.abejas,.anita,.bonny,.insectos,.mago,.oggly,.oliver,.ozzy,.sonny,.ussy,.sony,.quote,.logo-sipirily{display: inline-block;background-repeat: no-repeat;background-image: url('../img/home/sprite.png');}
+.icono-sucursales,.mono-bolsatrabajo,.mono-contacto,.mono-home,.mono-home,.mono-media,.mono-paquetes-y-promos,.mono-sipirily,.boton-subir,.icono-facebook,.icono-google,.icono-twitter,.icono-youtube,.icono-franquicias,.icono-invitaciones,.icono-paquetes,.icono-promociones,.btn-hover,.btn-next,.btn-prev,.map-icon,.abejas,.anita,.bonny,.insectos,.mago,.oggly,.oliver,.ozzy,.sonny,.ussy,.sony,.quote,.logo-sipirily,.btn-next-green,.btn-prev-green{display: inline-block;background-repeat: no-repeat;background-image: url('../img/home/sprite.png');}
 .icono-sucursales{background-position:0px 0px;width:64px;height:45px;}
 .mono-bolsatrabajo{background-position:0px -45px;width:57px;height:38px;}
 .mono-contacto{background-position:0px -83px;width:47px;height:39px;}
@@ -18,11 +18,9 @@
 .icono-invitaciones{background-position:-70px -119px;width:189px;height:208px;}
 .icono-paquetes{background-position:0px -632px;width:189px;height:208px;}
 .icono-promociones{background-position:-189px -327px;width:189px;height:208px;}
-.btn-next{background-position:-55px -354px;width:40px;height:40px;}
-.btn-prev{background-position:-95px -327px;width:40px;height:40px;}
 .btn-hover{background-position:-105px 0px;width:100px;height:100px;}
-.btn-next{background-position:-135px -327px;width:45px;height:45px;}
-.btn-prev{background-position:-95px -372px;width:45px;height:45px;}
+.btn-next{background-position:-55px -354px;width:45px;height:45px;}
+.btn-prev{background-position:-100px -327px;width:45px;height:45px;}
 .map-icon{background-position:0px -840px;width:78px;height:75px;}
 .abejas{background-position:-189px -535px;width:292px;height:401px;}
 .anita{background-position:-378px 0px;width:292px;height:401px;}
@@ -37,4 +35,6 @@
 .sony{background-position:-78px -840px;width:88px;height:89px;}
 .quote{background-position:-378px -401px;width:80px;height:80px;}
 .logo-sipirily{background-position:-481px -802px;width:209px;height:109px;}
+.btn-next-green{background-position:-145px -327px;width:40px;height:40px;}
+.btn-prev-green{background-position:-145px -367px;width:40px;height:40px;}
 /* End Sprite Master CSS */
