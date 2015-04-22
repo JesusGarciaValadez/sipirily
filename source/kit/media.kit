@@ -5,61 +5,47 @@
 [[$header]]
             <div class="wrapper-title">
                 <section class="clearfix title central">
-                    <h1>Sipirily Media</h1>
+                    <h1>[[*pagetitle]]</h1>
                 </section>
             </div>
             <div class="wrapper-media">
                 <section class="clearfix media-open central">
                     <div class="media-list">
                         <ul class="tabs clearfix">
-                            <li class="active"><a href="#" title="Video">Video</a></li>
-                            <li><a href="#" title="Audio">Audio</a></li>
+                            [[!getResources?
+                                &parents=`[[*id]]`
+                                &resources=`67,68`
+                                &limit=`2`
+                                &depth=`0`
+                                &processTVs=`1`
+                                &includeTVs=`1`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`1`
+                                &showHidden=`1`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE branches-list-item.html`
+                                &tplFirst=`@FILE branches-list-first-item.html`
+                             ]]
                         </ul>
                     </div>
                     <div class="panes clearfix">
-                        <div class="media-locations clearfix">
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media-locations clearfix">
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                            <div class="media clearfix">
-                                <div>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                </div>
-                            </div>
-                        </div>
+                        [[!getResources?
+                            &parents=`[[*id]]`
+                            &resources=`67,68`
+                            &limit=`2`
+                            &depth=`0`
+                            &processTVs=`0`
+                            &includeTVs=`0`
+                            &includeContent=`0`
+                            &tvPrefix=``
+                            &showUnpublished=`1`
+                            &showHidden=`1`
+                            &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                            &tplPath=`[[++assets_path]]chunks/`
+                            &tpl=`@FILE media-embeds-list-item.html`
+                         ]]
                     </div>
                 </section>
             </div>
