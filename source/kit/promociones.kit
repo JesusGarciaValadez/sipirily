@@ -5,8 +5,8 @@
 [[$header]]
             <div class="wrapper-title">
                 <section class="clearfix title central">
-                    <h1>Paquetes y Promociones</h1>
-                    <h2>Ven y diviertete con nosotros</h2>
+                    <h1>[[*pagetitle]]</h1>
+                    <h2>[[*longtitle]]</h2>
                 </section>
             </div>
             <div class="wrapper-platinum-plan">
@@ -82,9 +82,21 @@
                     <a title="Anterior" class="browser btn-prev-green"></a>
                     <div class="scrollable clearfix">
                         <div class="items clearfix">
-                            <figure><img src="[[++site_url]]assets/img/promociones/banner.jpg" alt="Proximamente 20% de descuento por apertura en el apartado de tu fecha - Sucursal Querétaro"></figure>
-                            <figure><img src="[[++site_url]]assets/img/promociones/banner.jpg" alt="Proximamente 20% de descuento por apertura en el apartado de tu fecha - Sucursal Querétaro"></figure>
-                            <figure><img src="[[++site_url]]assets/img/promociones/banner.jpg" alt="Proximamente 20% de descuento por apertura en el apartado de tu fecha - Sucursal Querétaro"></figure>
+                            [[!getResources?
+                                &parents=`[[*id]]`
+                                &limit=`0`
+                                &depth=`0`
+                                &processTVs=`1`
+                                &includeTVs=`1`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`1`
+                                &showHidden=`1`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE promotion-list-item.html`
+                                &where=`['template'=>'9']`
+                             ]]
                         </div>
                     </div>
                     <a title="Siguiente" class="browser btn-next-green"></a>
