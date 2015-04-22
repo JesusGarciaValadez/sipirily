@@ -102,6 +102,21 @@
             } );
         }
 
+        if ($('.banner-our-promotions').exists()) {
+            sipirily.inicializeCarrousel( '.banner-our-promotions .scrollable', {
+                speed: 1000,
+                circular: true,
+                keyboard: false,
+                next: '.banner-our-promotions .btn-next-green',
+                prev: '.banner-our-promotions .btn-prev-green'
+            }, {}, {
+                steps: 1,
+                interval: 10000,
+                autoplay: true,
+                autopause: true
+            } );
+        }
+
         if ($('form').exists()) {
 
             //  Validation of the contact form
@@ -110,6 +125,7 @@
                 e.stopPropagation();
 
                 var contact         ={};
+                contact.sucursal    = $.trim($('input[name="branch"]').val());
                 contact.nombre      = $.trim($('input[name="name"]').val());
                 contact.correo      = $.trim($('input[name="mail"]').val());
                 contact.subject     = $.trim($('input[name="subject"]').val());
@@ -117,6 +133,17 @@
                 var flag            = true;
 
                 $('input.error, textarea.error').removeClass('error');
+
+
+                //  Valida el correo de la sucursal
+                if (!sipirily._validateMinLength(2, contact.sucursal.length)) {
+                    $('input[name="branch"]').addClass('error');
+                    flag    = false;
+                }
+                if (!sipirily._validateMail(contact.sucursal)) {
+                    $('input[name="branch"]').addClass('error');
+                    flag    = false;
+                }
 
                 //  Valida el nombre
                 if (!sipirily._validateMinLength(2, contact.nombre.length)) {
