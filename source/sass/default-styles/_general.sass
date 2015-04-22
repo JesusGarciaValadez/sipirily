@@ -94,6 +94,10 @@ html,body
                     height: 100%
                     list-style: none outside
                     width: 100px
+                    &.active
+                        a
+                            background-color: $menu-item-background
+                            color: $white-color
                     a
                         @include font-mask( normal, em( 13, 16 ), 1.2em, $helvetica, $menu-item-color )
                         box-sizing: border-box
