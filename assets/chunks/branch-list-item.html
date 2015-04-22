@@ -1,0 +1,44 @@
+                            <div class="branch clearfix">
+                                <figure>
+                                    [[+branchImage]]
+                                    <a href="#" title="Ver Galería">Ver Galería</a>
+                                    <figcaption class="clearfix">
+                                        <p class="branch-name">Sucursal [[+pagetitle]]</p>
+                                        <p class="branch-info">[[+branchDirection]]</p>
+                                        <p class="branch-phone">[[+branchPhone]]</p>
+                                        <p class="branch-email"><a href="mailto:[[+branchEmail]]" target="_blank" title="[[+branchEmail]]">[[+branchEmail]]</a></p>
+                                        <p class="links clearfix">
+                                            [[!getResources?
+                                                &parents=`[[+id]]`
+                                                &limit=`1`
+                                                &depth=`0`
+                                                &processTVs=`0`
+                                                &includeTVs=`0`
+                                                &includeContent=`0`
+                                                &tvPrefix=``
+                                                &showUnpublished=`0`
+                                                &showHidden=`0`
+                                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                                &tplPath=`[[++assets_path]]chunks/`
+                                                &tpl=`@FILE branch-list-date-item.html`
+                                                &where=`['template'=>'8']`
+                                             ]]
+                                             [[!getResources?
+                                                 &parents=`[[+id]]`
+                                                 &limit=`1`
+                                                 &depth=`0`
+                                                 &processTVs=`0`
+                                                 &includeTVs=`0`
+                                                 &includeContent=`0`
+                                                 &tvPrefix=``
+                                                 &showUnpublished=`0`
+                                                 &showHidden=`0`
+                                                 &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                                 &tplPath=`[[++assets_path]]chunks/`
+                                                 &tpl=`@FILE branch-list-direction-item.html`
+                                                 &where=`['template'=>'8']`
+                                              ]]
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </div>

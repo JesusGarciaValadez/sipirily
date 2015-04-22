@@ -5,285 +5,49 @@
 [[$header]]
             <div class="wrapper-title">
                 <section class="clearfix title central">
-                    <h1>Nuestras Sucursales</h1>
+                    <h1>[[*pagetitle]]</h1>
                 </section>
             </div>
             <div class="wrapper-branches">
                 <section class="clearfix branches-open central">
                     <div class="branches-list">
                         <ul class="tabs clearfix">
-                            <li class="active"><a href="#" title="Zona Oriente">Zona Oriente</a></li>
-                            <li><a href="#" title="Zona Norte">Zona Norte</a></li>
-                            <li><a href="#" title="Zona Centro">Zona Centro</a></li>
-                            <li><a href="#" title="Zona Sur">Zona Sur</a></li>
-                            <li><a href="#" title="Foráneas">Foráneas</a></li>
+                            [[!getResources?
+                                &parents=`[[*id]]`
+                                &resources=`9,10,11,12,13`
+                                &limit=`5`
+                                &depth=`0`
+                                &processTVs=`1`
+                                &includeTVs=`1`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`0`
+                                &showHidden=`0`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE branches-list-item.html`
+                                &tplFirst=`@FILE branches-list-first-item.html`
+                                &where=`['template'=>'2']`
+                             ]]
                         </ul>
                     </div>
                     <div class="panes clearfix">
-                        <div class="branches-locations clearfix">
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal Aeropuerto</p>
-                                        <p class="branch-info">Norte 21 No. 165 Col. Moctezuma 2a. Sección México D.F. Delegación Venustiano Carranza C.P. 15530.</p>
-                                        <p class="branch-phone">Tel: 2643-2004</p>
-                                        <p class="branch-email"><a href="mailto:moctezuma@sipirily.com" target="_blank" title="moctezuma@sipirily.com">moctezuma@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal Viaducto</p>
-                                        <p class="branch-info">Viaducto Miguel Alemán, Esq. Congreso de la Unión, Col. Jamaica, México D.F.</p>
-                                        <p class="branch-phone">Tel: 5740-3027</p>
-                                        <p class="branch-email"><a href="mailto:viaducto@sipirily.com" target="_blank" title="viaducto@sipirily.com">viaducto@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal Marina Nacional</p>
-                                        <p class="branch-info">Lago Chapala 1080, Col. Anáhuac, Del. Miguel Hidalgo, México D.F, C.P. 11320</p>
-                                        <p class="branch-phone">Tel: 5360-6285</p>
-                                        <p class="branch-email"><a href="mailto:marina@sipirily.com" target="_blank" title="marina@sipirily.com">marina@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal Álamos</p>
-                                        <p class="branch-info">Calle Soria #103 Col. Álamos Benito Juárez, Distrito Federal, C.P. 03400</p>
-                                        <p class="branch-phone">Tel: 5538-7625</p>
-                                        <p class="branch-email"><a href="mailto:alamos@sipirily.com" target="_blank" title="alamos@sipirily.com">alamos@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="branches-locations clearfix">
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="branches-locations clearfix">
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="branches-locations clearfix">
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="branch clearfix">
-                                <figure>
-                                    <img src="[[++site_url]]assets/img/sucursales/foto_1.jpg" alt="Sucursal">
-                                    <a href="#" title="Ver Galería">Ver Galería</a>
-                                    <figcaption class="clearfix">
-                                        <p class="branch-name">Sucursal </p>
-                                        <p class="branch-info"></p>
-                                        <p class="branch-phone">Tel: </p>
-                                        <p class="branch-email"><a href="mailto:@sipirily.com" target="_blank" title="@sipirily.com">@sipirily.com</a></p>
-                                        <p class="links clearfix">
-                                            <a href="" target="_self" title="Aparte tu fecha" class="button">Aparta tu fecha</a>
-                                            <a href="" target="_self" title="¿Cómo llegar?" class="button">¿Cómo llegar?</a>
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
+                        [[!getResources?
+                            &parents=`[[*id]]`
+                            &resources=`9,10,11,12,13`
+                            &limit=`5`
+                            &depth=`0`
+                            &processTVs=`1`
+                            &includeTVs=`1`
+                            &includeContent=`1`
+                            &tvPrefix=``
+                            &showUnpublished=`1`
+                            &showHidden=`1`
+                            &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                            &tplPath=`[[++assets_path]]chunks/`
+                            &tpl=`@FILE branches-locations-list-item.html`
+                            &where=`['template'=>'2']`
+                         ]]
                     </div>
                 </section>
             </div>
