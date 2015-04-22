@@ -229,7 +229,7 @@
             });
         }
 
-        if ($('.branches, .media').exists()) {
+        if ($('.branches, .media, .home').exists()) {
             $('ul.tabs').tabs('div.panes > div');
 
             $('ul.tabs').on( 'click', 'li', function ( e ) {

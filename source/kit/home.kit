@@ -7,18 +7,20 @@
                 <section class="clearfix gallery central">
                     <div class="scrollable clearfix">
                         <div class="items clearfix">
-                            <article class="clearfix">
-                                <h1>En Sipirily, vive <br />una experiencia inolvidable</h1>
-                                <a href="[[~]]" title="Conoce las sucursales" class="button purple border-purple">Conoce las sucursales</a>
-                            </article>
-                            <article class="clearfix">
-                                <h1>En Sipirily, vive <br />una experiencia inolvidable</h1>
-                                <a href="[[~]]" title="Conoce las sucursales" class="button purple border-purple">Conoce las sucursales</a>
-                            </article>
-                            <article class="clearfix">
-                                <h1>En Sipirily, vive <br />una experiencia inolvidable</h1>
-                                <a href="[[~]]" title="Conoce las sucursales" class="button purple border-purple">Conoce las sucursales</a>
-                            </article>
+                            [[!getResources?
+                                &parents=`78`
+                                &limit=`0`
+                                &depth=`0`
+                                &processTVs=`0`
+                                &includeTVs=`0`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`1`
+                                &showHidden=`1`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE home-banner-list-item.html`
+                             ]]
                         </div>
                         <div class="navigator"></div>
                     </div>
@@ -28,7 +30,7 @@
                 <section class="clearfix know-our-branches central">
                     <h2>Conoce nuestras sucursales</h2>
                     <span aria-hidden="true" class="sony"></span>
-                    <a href="[[~]]" title="Da click aquí" target="_blank" class="button green border-white">Da click aquí</a>
+                    <a href="[[++site_url]][[~2]]" title="Da click aquí" target="_blank" class="button green border-white">Da click aquí</a>
                 </section>
             </div>
             <div class="wrapper-welcome-yo-sipirily-land">
@@ -40,25 +42,25 @@
                             <span aria-hidden="yes" class="icono-franquicias"></span>
                             <p class="section-name">Franquicias</p>
                             <p class="section-description">¿Quieres abrir una Franquicia de Sipirily?<br />Aquí te decimos cómo hacerlo.</p>
-                            <a href="[[~]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
+                            <a href="[[++site_url]][[~2]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
                         </li>
                         <li class="character-small-">
                             <span aria-hidden="yes" class="icono-paquetes"></span>
                             <p class="section-name">Paquetes</p>
                             <p class="section-description">En Sipirily, tenemos los paquetes perfectos para ti. Conócelos y escoge el que más te guste.</p>
-                            <a href="[[~]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
+                            <a href="[[++site_url]][[~3]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
                         </li>
                         <li class="character-small-">
                             <span aria-hidden="yes" class="icono-invitaciones"></span>
                             <p class="section-name">Invitaciones</p>
                             <p class="section-description">Por que tu fiesta es lo más importante, descarga e imprime tus invitaciones.</p>
-                            <a href="[[~]]" class="know-more button yellow border-blue" title="Descarga Aquí">Descarga Aquí</a>
+                            <a href="[[++site_url]][[~4]]" class="know-more button yellow border-blue" title="Descarga Aquí">Descarga Aquí</a>
                         </li>
                         <li class="character-small-">
                             <span aria-hidden="yes" class="icono-promociones"></span>
                             <p class="section-name">Promociones</p>
                             <p class="section-description">Conoce nuestras promociones mensuales o por sucursal, y animate a apartar tu fecha ¡ya!</p>
-                            <a href="[[~]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
+                            <a href="[[++site_url]][[~3]]" class="know-more button yellow border-blue" title="Conoce Más">Conoce Más</a>
                         </li>
                     </ul>
                 </section>
@@ -70,83 +72,95 @@
                         <li><a href="#" title="Video">Video</a></li>
                     </ul>
                     <article class="branch-hightlighted clearfix">
-                        <div class="features clearfix">
-                            <h4>En Sipirily, somos expertos en hacer fiestas infantiles, por eso somos los número uno.</h4>
-                            <ul class="clearfix">
-                                <li>
-                                    <p class="clearfix bullet" aria-hidden="true"></p>
-                                    <p class="branch-name">Sucursal Sipirily Aragón</p>
-                                    <p>Aparte tu fecha en la sucursal Aragón, disfruta de las promociones de este mes.</p>
-                                </li>
-                                <li>
-                                    <p class="clearfix bullet" aria-hidden="true"></p>
-                                    <p class="branch-name">Aparta tu fecha</p>
-                                    <p>Consulta fechas disponibles</p>
-                                    <p>Tel. 55 5555 5555</p>
-                                    <p><a href="mailto:aragon@sipirily.com" title="aragon@sipirily.com">aragon@sipirily.com</a></p>
-                                    <p class="map-holder clearfix">Ubica tu sucursal aquí <a href="#" target="_self" title="ubica tu sucursal aquí" class="clearfix">
-                                        <span class="map-icon" aria-hidden="true"></span>
-                                    </a></p>
-                                </li>
-                            </ul>
-                        </div>
+                        [[!getResources?
+                            &parents=`79`
+                            &limit=`1`
+                            &depth=`0`
+                            &processTVs=`1`
+                            &includeTVs=`1`
+                            &includeContent=`1`
+                            &tvPrefix=``
+                            &showUnpublished=`1`
+                            &showHidden=`1`
+                            &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                            &tplPath=`[[++assets_path]]chunks/`
+                            &tpl=`@FILE branch-hightlighted-list-item.html`
+                         ]]
                         <div class="panes">
                             <div class="photo clearfix scrollable">
                                 <a title="Anterior" class="browser prev btn-prev">Anterior</a>
                                 <div class="items clearfix">
-                                    <figure><img src="[[++site_url]]assets/img/home/destacados/img-gde.jpg" alt=""></figure>
-                                    <figure><img src="[[++site_url]]assets/img/home/destacados/img-gde.jpg" alt=""></figure>
-                                    <figure><img src="[[++site_url]]assets/img/home/destacados/img-gde.jpg" alt=""></figure>
+                                    [[!getResources?
+                                        &parents=`79`
+                                        &limit=`0`
+                                        &depth=`0`
+                                        &processTVs=`1`
+                                        &includeTVs=`1`
+                                        &includeContent=`1`
+                                        &tvPrefix=``
+                                        &showUnpublished=`1`
+                                        &showHidden=`1`
+                                        &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                        &tplPath=`[[++assets_path]]chunks/`
+                                        &tpl=`@FILE branches-hightlighted-image-list-item.html`
+                                        &where=`['template'=>'13']`
+                                     ]]
                                 </div>
                                 <a title="Siguiente" class="browser next btn-next">Siguiente</a>
                                 <ul class="clearfix thumbnails">
-                                    <li class="active">
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
-                                    <li>
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
-                                    <li>
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
+                                    [[!getResources?
+                                        &parents=`79`
+                                        &limit=`3`
+                                        &depth=`0`
+                                        &processTVs=`1`
+                                        &includeTVs=`1`
+                                        &includeContent=`1`
+                                        &tvPrefix=``
+                                        &showUnpublished=`1`
+                                        &showHidden=`1`
+                                        &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                        &tplPath=`[[++assets_path]]chunks/`
+                                        &tpl=`@FILE branches-hightlighted-image-thumbnail-list-item.html`
+                                        &where=`['template'=>'13']`
+                                     ]]
                                 </ul>
                             </div>
                             <div class="video clearfix scrollable">
                                 <a title="Anterior" class="browser prev btn-prev">Anterior</a>
                                 <div class="items clearfix">
-                                    <div>
-                                        <video src="">
-                                            <source>
-                                            <source>
-                                            <source>
-                                        </video>
-                                    </div>
-                                    <div>
-                                        <video src="">
-                                            <source>
-                                            <source>
-                                            <source>
-                                        </video>
-                                    </div>
-                                    <div>
-                                        <video src="">
-                                            <source>
-                                            <source>
-                                            <source>
-                                        </video>
-                                    </div>
+                                    [[!getResources?
+                                        &parents=`79`
+                                        &limit=`3`
+                                        &depth=`0`
+                                        &processTVs=`1`
+                                        &includeTVs=`1`
+                                        &includeContent=`1`
+                                        &tvPrefix=``
+                                        &showUnpublished=`1`
+                                        &showHidden=`1`
+                                        &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                        &tplPath=`[[++assets_path]]chunks/`
+                                        &tpl=`@FILE branches-hightlighted-video-list-item.html`
+                                        &where=`{'template:=':'14'}`
+                                     ]]
                                 </div>
                                 <a title="Siguiente" class="browser next btn-next">Siguiente</a>
                                 <ul class="clearfix thumbnails">
-                                    <li>
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
-                                    <li>
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
-                                    <li>
-                                        <figure><img src="[[++site_url]]assets/img/home/destacados/thumb-1.jpg" alt=""></figure>
-                                    </li>
+                                    [[!getResources?
+                                        &parents=`79`
+                                        &limit=`0`
+                                        &depth=`0`
+                                        &processTVs=`1`
+                                        &includeTVs=`1`
+                                        &includeContent=`1`
+                                        &tvPrefix=``
+                                        &showUnpublished=`1`
+                                        &showHidden=`1`
+                                        &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                        &tplPath=`[[++assets_path]]chunks/`
+                                        &tpl=`@FILE branches-hightlighted-video-thumbnail-list-item.html`
+                                        &where=`{'template:=':'14'}`
+                                     ]]
                                 </ul>
                             </div>
                         </div>
