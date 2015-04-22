@@ -15,66 +15,21 @@
                     <p>Aplica para pertenecer al equipo de Sipirly</p>
                     <h4>En Sipirily, estamos constantemente en búsqueda de talento y nos gustaría que formaras parte de nuestro equipo de colaboradores.</h4>
                     <div class="wrapper-apply clearfix">
-                        <article class="clearfix">
-                            <div class="info">
-                                <h5>Gerente de sucursal</h5>
-                                <p>Sucursal Aragón</p>
-                                <ul class="clearfix">
-                                    <li>
-                                        <p><span class="vacancy-quantity">1</span><br />Vacantes</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="vacancy-zone">Zona</span><br />Oriente</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <figure>
-                                <img src="[[++site_url]]assets/img/bolsa-de-trabajo/img_trabajo1.jpg" alt="">
-                                <figcaption>
-                                    <p class="button orange"><a href="[[++site_url]][[~7]]" target="_self" title="Aplicar">Aplicar</a>
-                                </figcaption>
-                            </figure>
-                        </article>
-                        <article class="clearfix">
-                            <div class="info">
-                                <h5>Gerente de sucursal</h5>
-                                <p>Sucursal Aragón</p>
-                                <ul class="clearfix">
-                                    <li>
-                                        <p><span class="vacancy-quantity">1</span><br />Vacantes</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="vacancy-zone">Zona</span><br />Oriente</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <figure>
-                                <img src="[[++site_url]]assets/img/bolsa-de-trabajo/img_trabajo1.jpg" alt="">
-                                <figcaption>
-                                    <p class="button orange"><a href="[[++site_url]][[~7]]" target="_self" title="Aplicar">Aplicar</a>
-                                </figcaption>
-                            </figure>
-                        </article>
-                        <article class="clearfix">
-                            <div class="info">
-                                <h5>Gerente de sucursal</h5>
-                                <p>Sucursal Aragón</p>
-                                <ul class="clearfix">
-                                    <li>
-                                        <p><span class="vacancy-quantity">1</span><br />Vacantes</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="vacancy-zone">Zona</span><br />Oriente</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <figure>
-                                <img src="[[++site_url]]assets/img/bolsa-de-trabajo/img_trabajo1.jpg" alt="">
-                                <figcaption>
-                                    <p class="button orange"><a href="[[++site_url]][[~7]]" target="_self" title="Aplicar">Aplicar</a>
-                                </figcaption>
-                            </figure>
-                        </article>
+                        [[!getResources?
+                            &parents=`[[*id]]`
+                            &limit=`0`
+                            &depth=`0`
+                            &processTVs=`1`
+                            &includeTVs=`1`
+                            &includeContent=`1`
+                            &tvPrefix=``
+                            &showUnpublished=`1`
+                            &showHidden=`0`
+                            &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                            &tplPath=`[[++assets_path]]chunks/`
+                            &tpl=`@FILE vacancy-list-item.html`
+                            &where=`['template'=>'11']`
+                         ]]
                     </div>
                 </section>
             </div>
