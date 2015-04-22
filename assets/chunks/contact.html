@@ -20,9 +20,9 @@
                             <p>Sábado y domingo de<br />10:00 a 20:00 hrs.</p>
                         </li>
                     </ul>
-                    <form action="" method="POST">
+                    <form action="[[++site_url]]snippets/controller.php" method="POST">
                         <fieldset>
-                            <input type="hidden" name="branch" value="[[+branchEmail]]">
+                            <input type="hidden" name="branch" value="[[*branchEmail]]">
                             <div class="input"><input type="text" name="name" placeholder="Nombre *"></div>
                             <div class="input"><input type="text" name="mail" placeholder="E-mail *"></div>
                             <div class="input"><input type="text" name="subject" placeholder="Asunto *"></div>
