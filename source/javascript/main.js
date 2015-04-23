@@ -194,7 +194,7 @@
                 };
 
                 var successFunction = function(responseText) {
-                    //console.log(responseText.success);
+                    //console.log(responseText);
 
                     var _timer, _class, _message;
 
@@ -205,7 +205,7 @@
 
                             if (responseText &&(responseText.success === 'true' || responseText.success === true)) {
                                 _class  = 'success';
-                                _message= 'Éxito';
+                                _message= '¡Gracias por contestar el cuestionario! Nos comunicaremos contigo a la brevedad.';
                             } else{
                                 _class  = 'fail';
                                 _message= 'Error al hacer el envío';
@@ -217,15 +217,16 @@
                         _class  = 'info';
                         _message= 'Intenta más tarde.';
                     } finally{
-                        sipirily.showAlert(_class, _message);
+                        /*sipirily.showAlert(_class, _message);
                         _timer  = setTimeout(function() {
                             sipirily.hideAlert(_class);
                             clearTimeout(_timer);
-                        }, 5000);
+                        }, 5000);*/
+                        alert( _message );
                     }
                 };
 
-                sipirily.validateForm('form[name="contact-form"]', contact, errorFunction, successFunction);
+                sipirily.validateForm('form', contact, errorFunction, successFunction);
             });
         }
 
