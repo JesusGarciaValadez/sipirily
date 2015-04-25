@@ -2,7 +2,7 @@
                 <header class="cleafix header central">
                     <a href="[[++site_url]]" title="Inicio Sipirily" class="logo-sipirily">Sipirily</a>
                     <nav>
-                        <ul class="clearfix">
+                        <ul class="clearfix desktop">
                             <li class="clearfix"><a href="[[++site_url]]" alt="Home" target="_self" class="clearfix">Inicio</a></li>
                             [[!getResources?
                                 &parents=`1`
@@ -22,6 +22,28 @@
                                 &conditionalTpls=`{"[[*id]]":"@FILE menu-list-current-item.html"}`
                              ]]
                         </ul>
+                        <form method="post" class="mobile">
+                            <fieldset>
+                                <select name="menu">
+                                    <option value="">Menú</option>
+                                    [[!getResources?
+                                        &parents=`1`
+                                        &resources=`6`
+                                        &limit=`0`
+                                        &depth=`0`
+                                        &includeTVs=`1`
+                                        &processTVs=`1`
+                                        &tvPrefix=``
+                                        &showUnpublished=`0`
+                                        &showHidden=`0`
+                                        &includeContent=`0`
+                                        &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                        &tplPath=`[[++assets_path]]chunks/`
+                                        &tpl=`@FILE menu-mobile-list-item.html`
+                                     ]]
+                                </select>
+                            </fieldset>
+                        </form>
                     </nav>
                 </header>
             </div>

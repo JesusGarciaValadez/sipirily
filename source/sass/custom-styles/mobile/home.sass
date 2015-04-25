@@ -1,0 +1,200 @@
+.home
+    .wrapper-gallery, .wrapper-know-our-branches, .wrapper-welcome-yo-sipirily-land,
+    .wrapper-branch-hightlighted-video, .wrapper-meet-out-characters, .wrapper-blockquote
+        @extend %wrapper
+        height: auto
+    .wrapper-gallery
+        height: 62.5vw
+        .gallery
+            .scrollable
+                .items
+                    article
+                        width: 90vw
+                        h1
+                            background-color: rgba(0,0,0,0.5)
+                            margin: 10px auto 0
+                            font-size: 5.3125vw
+                            width: 81.25vw
+                        a
+                .navigator
+                    a
+                        font-size: 5vw
+                        width: 83.125vw
+                        &.active
+    .wrapper-know-our-branches
+        .know-our-branches
+            h2
+            span
+            a
+    .wrapper-welcome-yo-sipirily-land
+        background: $yellow-background
+        .welcome-to-sipirily-land
+            h3
+                font-size: 8.4375vw
+                line-height: 1.2em
+                margin: 0 auto 6.25vw
+            p
+            ul
+                flex-flow: column nowrap
+                li
+                    width: 100%
+                    p
+                        &.section-name
+                            font-size: 9.375vw
+                            margin: 0 auto
+                        &.section-description
+                            font-size: 4.375vw
+                    a.know-more
+    .wrapper-branch-hightlighted-video
+        background: none
+        section.central
+            > ul
+                display: flex
+                flex-flow: column nowrap
+                margin: 4.6875vw auto 0
+                position: static
+                width: 62.5vw
+                li
+                    align-self: flex-start
+                    padding: 4.6875vw 6.25vw
+                    position: static
+                    top: auto
+                    width: 100%
+                    a
+                        display: block
+                        text-align: center
+                        width: 100%
+                    &.active
+                        margin: 0 auto 3.125vw
+                        position: relative
+                        &:after
+                            content: ""
+                            border-color: $menu-item-background transparent transparent transparent
+                            border-style: solid
+                            border-width: 3.125vw
+                            bottom: -6.25vw
+                            left: 50%
+                            margin: 0 0 0 -1.5625vw
+                            position: absolute
+                        a
+            .branch-hightlighted
+                flex-flow: column nowrap
+                .features, .photos
+                    width: 100%
+                .features
+                    padding: 0
+                    h4
+                    ul
+                        box-sizing: border-box
+                        padding: 0 6.25vw
+                        li
+                            .bullet
+                            p
+                                line-height: 1.5em
+                                padding: 0
+                                &.branch-name
+                                    font-size: 6.25vw
+                                    line-height: 1em
+                                    text-align: center
+                                &.map-holder
+                                    a
+                                        margin: 0 0 0 15px
+                                        width: 62px
+                                a
+                                .map-icon
+                                    background: url("../img/home/destacados/map-icon.png") no-repeat scroll 0 0 transparent
+                                    background-size: 100%
+                                    height: 19.6875vw
+                                    width: 100%
+                .photo, .video
+                    height: auto
+                    padding: 0
+                    width: 90vw
+                    a
+                        &.browser
+                            background-size: 100% !important
+                            height: 9.375vw
+                            margin: -15px 0 0
+                            top: 33%
+                            width: 9.375vw
+                        &.prev
+                            background: url("../img/home/destacados/btn-prev.png") no-repeat scroll 0 0 transparent
+                        &.next
+                            background: url("../img/home/destacados/btn-next.png") no-repeat scroll 0 0 transparent
+                        &.disabled
+                    .items
+                        height: 65.625vw
+                        figure, div
+                            width: 90vw
+                            &:hover:after
+                            iframe
+                                height: 100%
+                                width: 100%
+                            img, video
+                                width: 90vw
+                    .thumbnails
+                        display: flex
+                        flex-flow: row nowrap
+                        height: 18.75vw
+                        margin: 9.375vw auto 6.25vw
+                        padding: 0
+                        position: static
+                        li
+                            &.active
+                            &:last-child
+                            figure, iframe, video
+                                display: block
+                                height: 100%
+                                margin: 0
+                                width: 100%
+                                img
+                                    display: block
+                                    width: 100%
+                .video
+                    video
+    .wrapper-meet-out-characters
+        .character-gallery
+            h4
+                font-size: 6.25vw
+                line-height: 1.3em
+                margin: 0 auto 7.8125vw
+            a
+                &.browser
+                    font-size: 5vw
+                    height: 9.375vw
+                    margin: 4.6875vw 0 0
+                    top: 53%
+                    width: 9.375vw
+                &.prev
+                    left: 3.125vw
+                &.next
+                    right: 3.125vw
+            .scrollable
+                display: block
+                height: 71.875vw
+                margin: 0 auto 3.125vw
+                width: 53.125vw
+                .item
+                    figure
+                        height: 73.4375vw
+                        margin: 0 !important
+                        width: 53.125vw
+                        &:first-child
+                        &:last-child
+                        img
+                            width: 53.125vw
+    .wrapper-blockquote
+        .blockquote
+            width: 100vw
+            .quote
+                margin: 6.25vw 0 0 -12.5vw
+                width: 25vw
+            quote
+                margin: 40.625vw auto 0
+                font-size: 5vw
+                line-height: 1.3em
+                width: 87.5vw
+            hr
+                margin: 9.375vw auto
+            p
+                &.author
