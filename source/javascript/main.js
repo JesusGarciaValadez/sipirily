@@ -117,7 +117,7 @@
             } );
         }
 
-        if ($('form').exists()) {
+        if ($('form[name="contact"]').exists()) {
 
             //  Validation of the contact form
             $('input[type="submit"]').on('click', function(e) {
@@ -227,6 +227,13 @@
                 };
 
                 sipirily.validateForm('form', contact, errorFunction, successFunction);
+            });
+        }
+
+        if ($('form.mobile').exists()) {
+            $('form.mobile').on('change', 'select[name="menu"]', function(e) {
+                var _newLocation = $(e.currentTarget).val();
+                window.location.href = _newLocation;
             });
         }
 
