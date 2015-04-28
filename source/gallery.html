@@ -1,0 +1,60 @@
+[[$head]]
+    </head>
+    <body>
+        <div class="wrapper internal clearfix gallery" id="home">
+[[$header]]
+            <div class="wrapper-title">
+                <section class="clearfix title central">
+                    <h1>[[*pagetitle]]</h1>
+                </section>
+            </div>
+            <div class="wrapper-gallery">
+                <section class="clearfix central">
+                    <div class="scrollable big-image">
+                        <article class="items clearfix">
+                            [[!getResources?
+                                &parents=`[[*id]]`
+                                &limit=`0`
+                                &depth=`0`
+                                &processTVs=`1`
+                                &includeTVs=`1`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`1`
+                                &showHidden=`0`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE gallery-images-list-item.html`
+                             ]]
+                        </article>
+                    </div>
+                    <div class="scrollable small-image">
+                        <a title="Anterior" class="browser prev">Anterior</a>
+                        <article class="items clearfix">
+                            [[!getResources?
+                                &parents=`[[*id]]`
+                                &limit=`0`
+                                &depth=`0`
+                                &processTVs=`1`
+                                &includeTVs=`1`
+                                &includeContent=`1`
+                                &tvPrefix=``
+                                &showUnpublished=`1`
+                                &showHidden=`0`
+                                &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                                &tplPath=`[[++assets_path]]chunks/`
+                                &tpl=`@FILE gallery-thumbnails-list-item.html`
+                                &tplFirst=`@FILE gallery-thumbnails-first-item.html`
+                             ]]
+                        </article>
+                        <a title="Siguiente" class="browser next">Siguiente</a>
+                    </div>
+                </section>
+            </div>
+
+[[$footer]]
+            <a href="#home" target="_self" title="Subir" class="boton-subir">Subir</a>
+        </div>
+[[$scripts]]
+    </body>
+</html>
