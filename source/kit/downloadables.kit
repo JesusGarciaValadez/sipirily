@@ -1,0 +1,38 @@
+[[$head]]
+    </head>
+    <body>
+        <div class="wrapper internal clearfix downloadables" id="home">
+[[$header]]
+            <div class="wrapper-title">
+                <section class="clearfix title central">
+                    <h1>[[*pagetitle]]</h1>
+                </section>
+            </div>
+            <div class="wrapper-downloadables">
+                <section class="clearfix downloadables central">
+                    <p>[[*introtext]]</p>
+                    <div class="panes clearfix">
+                        [[!getResources?
+                            &parents=`[[*id]]`
+                            &limit=`0`
+                            &depth=`0`
+                            &processTVs=`1`
+                            &includeTVs=`1`
+                            &includeContent=`1`
+                            &tvPrefix=``
+                            &showUnpublished=`1`
+                            &showHidden=`0`
+                            &sortby=`{"menuindex":"ASC","publishedon":"ASC","createdon":"ASC"}`
+                            &tplPath=`[[++assets_path]]chunks/`
+                            &tpl=`@FILE downloadables-list-item.html`
+                         ]]
+                    </div>
+                </section>
+            </div>
+
+[[$footer]]
+            <a href="#home" target="_self" title="Subir" class="boton-subir">Subir</a>
+        </div>
+[[$scripts]]
+    </body>
+</html>
