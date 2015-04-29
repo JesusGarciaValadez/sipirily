@@ -1,0 +1,61 @@
+.branch-gallery
+    .wrapper-title
+        background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
+        height: 221px
+        .title
+            display: block
+            h1
+                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
+                margin-top: 16px
+                text-align: center
+                width: 100%
+    .wrapper-branch-gallery
+        .central
+            .scrollable
+                display: block
+                margin: 1em auto
+                overflow: hidden
+                position: relative
+                .items
+                    height: 100%
+                    position: absolute
+                    width: 2000em
+                    z-index: 5
+                    figure
+                        float: left
+                        height: 100%
+                        img
+                            display: block
+                            height: 100%
+                            width: 100%
+                &.big-image
+                    height: 572px
+                    width: 781px
+                    .items
+                        figure
+                            width: 781px
+                            img
+                                width: 781px
+                &.small-image
+                    height: 189px
+                    width: 960px
+                    a
+                        &.browser
+                            position: absolute
+                            top: 40%
+                            z-index: 10
+                        &.prev
+                            left: 0
+                        &.next
+                            right: 0
+                        &.disabled
+                            display: none
+                    .items
+                        figure
+                            cursor: pointer
+                            height: 98%
+                            margin: 0 18px
+                            width: 280px
+                            img
+                        .current
+                            border-bottom: 3px solid $menu-item-color

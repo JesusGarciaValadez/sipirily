@@ -1,14 +1,14 @@
 [[$head]]
     </head>
     <body>
-        <div class="wrapper internal clearfix gallery" id="home">
+        <div class="wrapper internal clearfix branch-gallery" id="home">
 [[$header]]
             <div class="wrapper-title">
                 <section class="clearfix title central">
                     <h1>[[*pagetitle]]</h1>
                 </section>
             </div>
-            <div class="wrapper-gallery">
+            <div class="wrapper-branch-gallery">
                 <section class="clearfix central">
                     <div class="scrollable big-image">
                         <article class="items clearfix">
@@ -29,7 +29,7 @@
                         </article>
                     </div>
                     <div class="scrollable small-image">
-                        <a title="Anterior" class="browser prev">Anterior</a>
+                        <a title="Anterior" class="browser clearfix prev btn-prev">Anterior</a>
                         <article class="items clearfix">
                             [[!getResources?
                                 &parents=`[[*id]]`
@@ -47,7 +47,7 @@
                                 &tplFirst=`@FILE gallery-thumbnails-first-item.html`
                              ]]
                         </article>
-                        <a title="Siguiente" class="browser next">Siguiente</a>
+                        <a title="Siguiente" class="browser clearfix next btn-next">Siguiente</a>
                     </div>
                 </section>
             </div>

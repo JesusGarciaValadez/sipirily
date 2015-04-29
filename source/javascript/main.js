@@ -117,6 +117,43 @@
             } );
         }
 
+        if ($('.branch-gallery').exists()) {
+            sipirily.inicializeCarrousel( '.big-image', {
+                speed: 250,
+                circular: false,
+                keyboard: false,
+                next: '',
+                prev: ''
+            }, {}, {
+                steps: 1,
+                interval: 10000,
+                autoplay: false,
+                autopause: true
+            } );
+
+            sipirily.inicializeCarrousel( '.small-image', {
+                speed: 250,
+                circular: false,
+                keyboard: false,
+                next: '.small-image .btn-next',
+                prev: '.small-image .btn-prev'
+            }, {}, {
+                steps: 1,
+                interval: 10000,
+                autoplay: false,
+                autopause: true
+            } );
+
+            var bigCarrusel = $('.big-image').data('scrollable');
+
+            $( '.small-image' ).on( 'click', 'figure', function ( e ) {
+                $('figure.current').removeClass('current');
+                $( e.currentTarget ).addClass('current');
+                var myIndex = $( e.currentTarget ).data('index') - 1;
+                bigCarrusel.seekTo(myIndex, 250);
+            } );
+        }
+
         if ($('form[name="contact"]').exists()) {
 
             //  Validation of the contact form

@@ -1,14 +1,14 @@
-.branches, .media
+.gallery
     .wrapper-title
         background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
         height: 69.0625vw
         .title
             h1
-                font-size: 14.0625vw
+                font-size: 9.375vw
                 line-height: 1.5em
                 margin-top: 5vw
-    .wrapper-branches, .wrapper-media
-        .branches-open, .media-open
+    .wrapper-gallery
+        .gallery-open
             .branches-list, .branches-locations,
             .media-list, .media-locations
                 padding: 6.25vw
@@ -32,43 +32,43 @@
                 ul
                     width: 57.8125vw
             .panes
-                .branches-locations, .media-locations
+                .element-container
                     display: flex
                     flex-flow: column nowrap
-                    .branch, .media
-                        margin: 1.5% 0 !important
-                        width: 100%
-                        figure,div
-                            img, figcaption, iframe, video
-                            img
-                                & ~ a
-                                    font-size: 4.375vw
-                                    line-height: 1.5em
-                                    margin: 0 0 0 ( -35.9375vw / 2 )
-                                    padding: 3.125vw 6.25vw
-                                    top: 27.96875vw
-                                &:hover ~ a, & ~ a:hover
-                            figcaption
-                                height: auto
-                                p
-                                    font-size: 3.75vw
-                                    line-height: 1.5em
+                .element
+                    margin: 1.5% 0 !important
+                    width: 100%
+                    figure,div
+                        img, figcaption, iframe, video
+                        img
+                            & ~ a
+                                font-size: 4.375vw
+                                line-height: 1.5em
+                                margin: 0 0 0 ( -35.9375vw / 2 )
+                                padding: 3.125vw 6.25vw
+                                top: 27.96875vw
+                            &:hover ~ a, & ~ a:hover
+                        figcaption
+                            height: auto
+                            p
+                                font-size: 3.75vw
+                                line-height: 1.5em
+                                a
+                                    &:hover
+                                &.branch-name
+                                    font-size: 5vw
+                                &.branch-info
+                                &.branch-phone
+                                &.branch-email
+                                &.links
+                                    position: static
                                     a
-                                        &:hover
-                                    &.branch-name
-                                        font-size: 5vw
-                                    &.branch-info
-                                    &.branch-phone
-                                    &.branch-email
-                                    &.links
-                                        position: static
-                                        a
-                                            font-size: 6.25vw
-                                            line-height: 1.5em
-                                            border: 1.5625vw solid $menu-item-background
-                                            margin: 3.125vw 0 !important
-                                            padding: 3.125vw 4.375vw
-                                            width: 100%
+                                        font-size: 6.25vw
+                                        line-height: 1.5em
+                                        border: 1.5625vw solid $menu-item-background
+                                        margin: 3.125vw 0 !important
+                                        padding: 3.125vw 4.375vw
+                                        width: 100%
                     .branch
                         min-height: 136.25vw
                     .media

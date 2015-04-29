@@ -121,11 +121,11 @@
         anchorMenu: function( selectorToApply, offsetTop, classToFix ) {
             var _tool,_selector,_offsetTop,_classToFix;
             _tool           =(window.pageYOffset !== undefined) ? window.pageYOffset :(document.documentElement || document.body.parentNode || document.body).scrollTop;
-            _selector       =(typeof(selectorToApply) == "undefined") ? "*" : selectorToApply;
-            _selector       =(typeof(_selector) == "object") ? _selector : $(_selector);
-            _offsetTop      =(offsetTop == "") ? 0 : offsetTop;
-            _offsetTop      =(typeof(_offsetTop) == "string") ? parseInt(_offsetTop) :(typeof(_offsetTop) == "number") ? _offsetTop : parseInt(_offsetTop);
-            _classToFix     =(typeof(classToFix) == "string") ? classToFix : '';
+            _selector       =(typeof(selectorToApply) === "undefined") ? "*" : selectorToApply;
+            _selector       =(typeof(_selector) === "object") ? _selector : $(_selector);
+            _offsetTop      =(offsetTop === "") ? 0 : offsetTop;
+            _offsetTop      =(typeof(_offsetTop) === "string") ? parseInt(_offsetTop) :(typeof(_offsetTop) === "number") ? _offsetTop : parseInt(_offsetTop);
+            _classToFix     =(typeof(classToFix) === "string") ? classToFix : '';
             if(_tool >= _offsetTop) {
                 _selector.addClass(_classToFix);
             } else {
@@ -148,20 +148,20 @@
         //  !Inicializador de un carrusel jQuery Tools
         inicializeCarrousel:    function ( selector, optionsScrollable, optionsNavigator, optionsAutoscroll ) {
 
-            _selector       = ( typeof( selector )  == "undefined" ) ? "*" : selector;
-            _selector       = ( typeof( _selector ) == "object" )    ? _selector : $( _selector );
+            _selector       = ( typeof( selector )  === "undefined" ) ? "*" : selector;
+            _selector       = ( typeof( _selector ) === "object" )    ? _selector : $( _selector );
 
-            if( !optionsScrollable || optionsScrollable == {} ) {
+            if( !optionsScrollable || optionsScrollable === {} ) {
                 optionsScrollable = {};
             }
-            if( !optionsNavigator || optionsNavigator == {} ) {
+            if( !optionsNavigator || optionsNavigator === {} ) {
                 optionsNavigator = {};
             }
-            if( !optionsAutoscroll || optionsAutoscroll == {} ) {
+            if( !optionsAutoscroll || optionsAutoscroll === {} ) {
                 optionsAutoscroll = {};
             }
 
-            _selector.scrollable( optionsScrollable ).navigator( optionsNavigator ).autoscroll( optionsAutoscroll );
+            return _selector.scrollable( optionsScrollable ).navigator( optionsNavigator ).autoscroll( optionsAutoscroll );
         },
     };
 

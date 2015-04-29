@@ -1,4 +1,4 @@
-.branches, .media
+.gallery
     .wrapper-title
         background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
         height: 221px
@@ -9,8 +9,10 @@
                 margin-top: 16px
                 text-align: center
                 width: 100%
-    .wrapper-branches, .wrapper-media
-        .branches-open, .media-open
+    .wrapper-gallery
+        .gallery-open
+            > p
+                @include font-mask( normal, em( 12, 16 ), 1.5em, $helvetica, $gray-text )
             .branches-list, .branches-locations,
             .media-list, .media-locations
                 box-sizing: border-box
@@ -53,76 +55,78 @@
             .panes
                 position: relative
                 z-index: 5
-                .branches-locations, .media-locations
+                .element-container
                     display: block
                     width: 100%
-                    .branch, .media
-                        float: left
-                        margin: 1.5%
-                        width: 30%
-                        &:first-child, &:nth-child( 4 ), &:nth-child( 7 ), &:nth-child( 10 )
-                            margin: 1.5% 1.5% 1.5% 0
-                        &:nth-child( 3 ), &:nth-child( 6 ), &:nth-child( 9 ), &:nth-child( 12 )
-                            margin: 1.5% 0 1.5% 1.5%
-                        figure,div
-                            height: 100%
-                            position: relative
+                .element
+                    float: left
+                    margin: 1.5%
+                    width: 30%
+                    &:first-child, &:nth-child( 4 ), &:nth-child( 7 ), &:nth-child( 10 )
+                        margin: 1.5% 1.5% 1.5% 0
+                    &:nth-child( 3 ), &:nth-child( 6 ), &:nth-child( 9 ), &:nth-child( 12 )
+                        margin: 1.5% 0 1.5% 1.5%
+                    figure, div, > a
+                        display: block
+                        height: 100%
+                        position: relative
+                        width: 100%
+                        img, figcaption, iframe, video
                             width: 100%
-                            img, figcaption, iframe, video
-                                width: 100%
-                            img
-                                & ~ a
-                                    @include font-mask( normal, em( 14, 16 ), 1.5em, $helvetica, $menu-item-background )
-                                    background: rgba( 255, 255, 255, 0.8 )
-                                    display: none
-                                    left: 50%
-                                    margin: 0 0 0 ( -115px / 2 )
-                                    padding: 10px 20px
-                                    position: absolute
-                                    text-transform: uppercase
+                        img
+                            & ~ a
+                                @include font-mask( normal, em( 14, 16 ), 1.5em, $helvetica, $menu-item-background )
+                                background: rgba( 255, 255, 255, 0.8 )
+                                display: none
+                                left: 50%
+                                margin: 0 0 0 ( -115px / 2 )
+                                padding: 10px 20px
+                                position: absolute
+                                text-transform: uppercase
+                                text-decoration: none
+                                top: 89.5px
+                            &:hover ~ a, & ~ a:hover
+                                cursor: position
+                                display: inline-block
+                                text-decoration: underline
+                        figcaption
+                            height: 230px
+                            p
+                                @include font-mask( normal, em( 12, 16 ), 1.5em, $helvetica, $gray-text )
+                                a
+                                    color: $gray-text
                                     text-decoration: none
-                                    top: 89.5px
-                                &:hover ~ a, & ~ a:hover
-                                    cursor: position
-                                    display: inline-block
-                                    text-decoration: underline
-                            figcaption
-                                height: 230px
-                                p
-                                    @include font-mask( normal, em( 12, 16 ), 1.5em, $helvetica, $gray-text )
+                                    &:hover
+                                        text-decoration: underline
+                                &.branch-name
+                                    color: $menu-item-background
+                                    font-size: em( 16, 16 )
+                                &.branch-info
+                                &.branch-phone
+                                &.branch-email
+                                &.links
+                                    bottom: 0
+                                    margin: 0 auto
+                                    position: absolute
+                                    width: 100%
                                     a
-                                        color: $gray-text
-                                        text-decoration: none
-                                        &:hover
-                                            text-decoration: underline
-                                    &.branch-name
-                                        color: $menu-item-background
-                                        font-size: em( 16, 16 )
-                                    &.branch-info
-                                    &.branch-phone
-                                    &.branch-email
-                                    &.links
-                                        bottom: 0
-                                        margin: 0 auto
-                                        position: absolute
-                                        width: 100%
-                                        a
-                                            @include font-mask( bold, em( 9, 13 ), 1.5em, $helvetica, $menu-item-background )
-                                            border: 5px solid $menu-item-background
-                                            padding: 10px 14px
-                                            width: 47.5%
-                                            &:first-child
-                                                float: left
-                                                margin: 0 1.5% 0 0
-                                            &:last-child
-                                                float: right
-                                                margin: 0 0 0 1.5%
-                    .branch
-                        min-height: 436px
-                    .media
-                        min-height: 200px
-                        div
+                                        @include font-mask( bold, em( 9, 13 ), 1.5em, $helvetica, $menu-item-background )
+                                        border: 5px solid $menu-item-background
+                                        padding: 10px 14px
+                                        width: 47.5%
+                                        &:first-child
+                                            float: left
+                                            margin: 0 1.5% 0 0
+                                        &:last-child
+                                            float: right
+                                            margin: 0 0 0 1.5%
+                .branch
+                    min-height: 436px
+                .media
+                    min-height: 200px
+                    div
+                        width: 100%
+                        img
                             width: 100%
-                            img
-                                width: 100%
+
 
