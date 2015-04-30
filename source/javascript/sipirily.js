@@ -49,6 +49,10 @@
          */
         //  !Método inicializador
         init:   function() {
+            var _path = location.pathname;
+            if ( _path === '/home' || _path === '/' ) {
+                $('nav ul li').eq(0).addClass( 'active' );
+            }
         },
         /**
          *
