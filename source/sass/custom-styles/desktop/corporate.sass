@@ -19,13 +19,15 @@
                 align-self: stretch
                 box-sizing: border-box
                 margin-top: 2em
+                width: 510px
             figure
                 img
+                    width: 100%
                 figcaption
                     p.branch-name
                         @include font-mask( normal, em( 18, 16 ), 1.5em, $helvetica, $link-color )
                     p
-                        @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $blank-text )
+                        @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $gray-text )
                         margin: 1em auto
                         padding: 0
                         position: relative
@@ -48,10 +50,10 @@
                                 right: 10px
             .info
                 box-sizing: border-box
-                padding: 0 50px 50px
+                padding: 0 33px 33px
                 h2
                     @include font-mask( normal, em( 38, 16 ), 1.5em, $helvetica, $menu-item-color )
-                    margin: 0 auto 1em
+                    margin: 0 auto
                     text-align: center
                 hr
                     border-top: 2px solid $menu-item-color
@@ -60,17 +62,18 @@
                     margin: 1em auto
                     width: 10%
                 p
-                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $blank-text )
+                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
                     margin: 5px auto
                     text-align: justify
     .wrapper-our-mision
         .our-mision
+            margin-bottom: 20px
             .info
                 float: left
                 width: 650px
                 h3
                     @include font-mask( normal, em( 30, 16 ), 1.5em, $helvetica, $menu-item-color )
-                    margin: 0 auto 1em
+                    margin: 0 auto
                     text-align: center
                 hr
                     border-top: 2px solid $menu-item-color
@@ -79,13 +82,14 @@
                     margin: 1em auto
                     width: 10%
                 p
-                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $blank-text )
+                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
                     margin: 1em auto
                     padding: 0
                     width: 100%
             figure
                 float: right
-                width: 300px
+                height: 226px
+                width: 283px
                 img
                     width: 100%
     .wrapper-our-philosophy-title
