@@ -1,20 +1,14 @@
 .branch-gallery
     .wrapper-title
         background: url( '../img/sucursales/banner.png' ) no-repeat scroll center center transparent
-        height: 221px
+        height: 69.0625vw
         .title
-            display: block
             h1
-                @include font-mask( normal, em( 50, 16 ), em( 100, 50 ), $helvetica, $white-color )
-                margin-top: 16px
-                text-align: center
-                width: 100%
+                font-size: 7.8125vw
+                line-height: 1.5em
+                margin-top: 5vw
     .wrapper-branch-gallery
         .central
-            p
-                a
-                    color: $white-color
-                    text-decoration: none
             .scrollable
                 display: block
                 margin: 1em auto
@@ -33,16 +27,17 @@
                             height: 100%
                             width: 100%
                 &.big-image
+                    display: none
                     height: 572px
-                    width: 781px
+                    width: 87.5vw
                     .items
                         figure
-                            width: 781px
+                            width: 87.5vw
                             img
-                                width: 781px
+                                width: 87.5vw
                 &.small-image
                     height: 189px
-                    width: 960px
+                    width: 87.5vw
                     a
                         &.browser
                             position: absolute
@@ -58,8 +53,8 @@
                         figure
                             cursor: pointer
                             height: 98%
-                            margin: 0 18px
-                            width: 280px
+                            margin: 0
+                            width: 87.5vw
                             img
                         .current
                             border-bottom: 3px solid $menu-item-color
