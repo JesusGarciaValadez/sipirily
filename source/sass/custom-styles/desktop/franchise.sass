@@ -1,0 +1,141 @@
+.franchise
+    .wrapper-title
+        background: url( '../img/corporativo/banner-sipirily.png' ) no-repeat scroll center center transparent
+        height: 200px
+        .title
+            display: block
+            h1, h2
+                margin: 0 auto
+                text-align: center
+                width: 100%
+            h1
+                @include font-mask( normal, em( 55, 16 ), em( 130, 55 ), $helvetica, $white-color )
+            h2
+                @include font-mask( normal, em( 18, 16 ), em( 18, 18 ), $helvetica, $white-color )
+    .image-left, .image-right
+        .central
+            display: flex
+            flex-flow: row nowrap
+            padding: 30px 0 0
+            figure, .info
+                align-self: stretch
+                width: 50%
+            figure
+                img
+                    display: block
+                    margin: 1em auto
+            h2, h3, h4
+                @include font-mask( normal, em( 38, 16 ), 1.5em, $helvetica, $menu-item-color )
+                margin: 0 auto
+                text-align: center
+            h3
+                font-size: em( 35, 16 )
+            h4
+                font-size: em( 22, 16 )
+            hr
+                border-top: 2px solid $menu-item-color
+                display: block
+                height: 0
+                margin: 1em auto
+                width: 10%
+            .info, figure figcaption
+                p, ul li, dl dd
+                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                    margin: 5px auto
+                    text-align: justify
+            .info
+                box-sizing: border-box
+                clear: both
+                padding: 0 33px 33px
+                dl
+                    dt, dd
+                        font-size: em( 14, 16 )
+                    dt
+                        clear: left
+                        float: left
+                    dd
+                        clear: right
+                        float: right
+                        font-weight: bold
+                        margin: 0
+                        padding: 0
+                        sup
+    .image-left
+        .central
+            figure
+                img
+                    margin: 0 0 0 120px
+    .wrapper-franchises
+        .franchises
+            figure
+                img
+                    margin: 0
+                    width: 100%
+    .wrapper-why-a-franchise
+        .why-a-franchise
+    .wrapper-who-seek
+        .who-seek
+    .wrapper-services-to-franchisees
+        .services-to-franchisees
+            display: block
+            h3
+            .info, figure
+                float: left
+            .info
+                h4
+                hr
+                ul
+                    li
+            figure
+                figcaption
+                    h4
+                    ul
+                        li
+                img
+                    display: block
+                    margin: 0 auto
+    .wrapper-training
+        .training
+    .wrapper-initial-investment
+        .initial-investment
+    .wrapper-phone-and-email
+        .phone-and-email
+            display: flex
+            flex-flow: row nowrap
+            .info
+                box-sizing: border-box
+                padding: 0 0 30px
+                width: 50%
+                h3
+                    @include font-mask( normal, em( 20, 16 ), 1.5em, $helvetica, $menu-item-background )
+                    float: left
+                    margin: 20px auto
+                    display: block
+                    text-align: center
+                    width: 100%
+                ul
+                    clear: left
+                    float: left
+                    margin: 0
+                    padding: 0
+                    width: 100%
+                    li
+                        @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                        list-style: none
+                        margin: 0
+                        padding: 0
+                        text-align: center
+                        > p
+                            margin: 0 auto !important
+                            text-align: center
+                            a
+                                @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+                                color: $gray-text
+                                text-align: center
+                                text-decoration: none
+                &:last-child
+                    display: flex
+                    p
+                        align-self: center
+                        margin: 10px auto 0
+                        a
