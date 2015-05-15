@@ -163,7 +163,7 @@ google-map
         display: block
         position: relative
         z-index: 100
-input[type="text"],input[type="email"],textarea
+input[type="text"], input[type="email"], textarea
     &.error
         border: 1px solid red !important
         box-shadow: 0 0 5px 0 rgba( 255, 0, 0, 0.8 )
@@ -195,43 +195,65 @@ input[type="text"],input[type="email"],textarea
                     a
                         color: $link-color
                         text-decoration: none
-        form
+.wrapper-job
+    .job
+        h5
+            @include font-mask( normal, em( 40, 16 ), 1.5em, $helvetica, $menu-item-background )
+            margin: 60px auto 0
             display: block
-            margin: 10px auto 0
-            fieldset
-                float: left
-                box-sizing: border-box
-                padding: 0 10px
-                width: 50%
-                input[type="text"], textarea
-                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
-                    border: 1px solid $gray-border
-                    width: 100%
-                &:nth-child( 2 )
-                    .input
-                        textarea
-                            height: 200px
-                            resize: unset
-                .input
-                    margin: 0 auto 35px
-                    width: 100%
-                    input[type="text"]
-                        height: 40px
-            >.input
-                align-self: unset !important
-                clear: both
-                display: block
-                margin: 0 auto 50px
-                input[type="submit"]
-                    @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $white-color )
-                    cursor: pointer
-                    display: block
-                    margin: 0 auto
-                    &:after
-                        content: ">"
-                        float: rigth
-                        margin-left: 5px
-                        position: relative
+            text-align: center
+    .file
+        display: flex
+        flex-flow: row nowrap
+        label, input
+            align-self: stretch
+        label
+            @include font-mask( normal, em( 15, 16 ), 1.5em, $helvetica, $gray-text )
+            width: 30%
+        input
+            width: 70%
+form[name="contact"], form[name="job-form"]
+    display: block
+    margin: 10px auto 0
+    fieldset
+        float: left
+        box-sizing: border-box
+        padding: 0 10px
+        input[type="text"], textarea, input[type="file"]
+            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $gray-text )
+            border: 1px solid $gray-border
+            width: 100%
+        &:nth-child( 2 )
+            .input
+                textarea
+                    height: 200px
+                    resize: unset
+        .input
+            margin: 0 auto 35px
+            width: 100%
+            input[type="text"]
+                height: 40px
+    >.input
+        align-self: unset !important
+        clear: both
+        display: block
+        margin: 0 auto 50px
+        input[type="submit"]
+            @include font-mask( normal, em( 16, 16 ), 1.5em, $helvetica, $white-color )
+            cursor: pointer
+            display: block
+            margin: 0 auto
+            &:after
+                content: ">"
+                float: rigth
+                margin-left: 5px
+                position: relative
+form[name="contact"]
+    fieldset
+        width: 50%
+form[name="job-form"]
+    fieldset
+        width: 100%
 .wrapper-footer
     background: url("../img/home/footer/fondo-footer.png") no-repeat scroll center center transparent
     height: 240px

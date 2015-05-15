@@ -1,0 +1,16 @@
+            <div class="wrapper-job">
+                <section class="central job clearfix">
+                    <h5>Adjunta tu Curriculum</h5>
+                    <form action="[[++site_url]]assets/snippets/controller.php?action=jobForm" method="POST" name="job-form" enctype="multipart/form-data">
+                        <fieldset>
+                            <input type="hidden" name="branch" value="[[*branchEmail]]">
+                            <div class="input"><input type="text" name="name" placeholder="Nombre *"></div>
+                            <div class="input"><input type="text" name="mail" placeholder="E-mail *"></div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="input file"><label for="curriculum">Adjunta tu currículum</label><input type="file" name="curriculum" accept=".doc,.docx,.pdf" placeholder="Adjunta tu currículum"></div>
+                        </fieldset>
+                        <div class="input"><input type="submit" value="Enviar Curriculum" placeholder="Enviar Curriculum" class="button blue border-blue"></div>
+                    </form>
+                </section>
+            </div>
