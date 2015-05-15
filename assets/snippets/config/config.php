@@ -1,7 +1,7 @@
 <?php
 //error_reporting(E_ERROR);
-error_reporting( E_ALL | E_STRICT ) ;
-ini_set( 'display_errors', 'On' );
+//error_reporting( E_ALL | E_STRICT ) ;
+ini_set( 'display_errors', 'Off' );
 date_default_timezone_set( 'America/Mexico_City' );
 
 define( 'BASE_PATH', dirname(dirname(dirname((dirname(__FILE__))))) . DIRECTORY_SEPARATOR );
