@@ -248,9 +248,9 @@
                                 _message= 'Error al hacer el envío';
                             }
                         } else{
-                            throw new Error('No es un JSON');
+                            throw new Error( 'No es un JSON' );
                         }
-                    } catch(e) {
+                    } catch( e ) {
                         _class  = 'info';
                         _message= 'Intenta más tarde.';
                     } finally{
@@ -263,7 +263,69 @@
                     }
                 };
 
-                sipirily.validateForm('form', contact, errorFunction, successFunction);
+                sipirily.validateForm( 'form[name="contact"]', contact, errorFunction, successFunction);
+            });
+        }
+
+        if ($('form[name="job-form"]').exists()) {
+
+            //  Validation of the job-form form
+            $('input[type="submit"]').on('click', function(e) {
+                var contact         ={};
+                contact.sucursal    = $.trim($('input[name="branch"]').val());
+                contact.nombre      = $.trim($('input[name="name"]').val());
+                contact.correo      = $.trim($('input[name="mail"]').val());
+                contact.curriculum  = $.trim($('input[name="curriculum"]').val());
+                var flag            = true;
+
+                $('input.error').removeClass('error');
+
+                //  Valida el correo de la sucursal
+                if (!sipirily._validateMinLength(2, contact.sucursal.length)) {
+                    $('input[name="branch"]').addClass('error');
+                    flag    = false;
+                }
+                if (!sipirily._validateMail(contact.sucursal)) {
+                    $('input[name="branch"]').addClass('error');
+                    flag    = false;
+                }
+
+                //  Valida el nombre
+                if (!sipirily._validateMinLength(2, contact.nombre.length)) {
+                    $('input[name="name"]').addClass('error');
+                    flag    = false;
+                }
+                if (!sipirily._validateMaxLength(140, contact.nombre.length)) {
+                    $('input[name="name"]').addClass('error');
+                    flag    = false;
+                }
+
+                //  Valida el correo
+                if (!sipirily._validateMinLength(2, contact.correo.length)) {
+                    $('input[name="mail"]').addClass('error');
+                    flag    = false;
+                }
+                if (!sipirily._validateMail(contact.correo)) {
+                    $('input[name="mail"]').addClass('error');
+                    flag    = false;
+                }
+
+                //  Valida que se escriba un mensaje
+                if (!sipirily._validateMinLength(2, contact.curriculum.length)) {
+                    $('input[type="file"]').addClass('error');
+                    flag    = false;
+                }
+                if (!sipirily._validateMaxLength(250, contact.curriculum.length)) {
+                    $('input[type="file"]').addClass('error');
+                    flag    = false;
+                }
+
+                if (!flag) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    return false;
+                }
             });
         }
 
