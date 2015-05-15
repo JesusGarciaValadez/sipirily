@@ -25,6 +25,8 @@ class Mailer {
             //De:
         $this->_mailer->From        = $config['mail_service']['sender_mail']  ;
         $this->_mailer->FromName    = $config['mail_service']['sender_name'] ;
+
+        //$this->_mailer->SMTPDebug   = true;
         $this->_mailer->ClearAddresses();
     }
 
@@ -108,7 +110,6 @@ class Mailer {
 
             $this->_mailer->AddBCC( $mail , $nombre );
         }
-
     }
 
     public function addAttach( $atach = array() ) {
@@ -117,11 +118,14 @@ class Mailer {
             self::throwMailerException( 'Attach: Es necesario que agregues cuando menos un archivo.' );
 
         foreach ( $atach as $file ){
-
-            if( empty( $file['file'] ) || empty( $file['name'] ) )
+            if( empty( $file['file'] ) && empty( $file['name'] ) )
+            {
                 self::throwMailerException( 'Attach: La lista de archivos no está en el formato correcto.' );
+            }
+            $filetype = ( !empty( $file['file'] ) ) ? 'file' : 'name';
+            //var_dump($file[$filetype]);
 
-            $att = $file['file'];
+            $att = $file[$filetype];
 
             if( ( $nombre = FilterInput::FilterValue( $file['name'] , 'string' , true ) ) === false )
                 self::throwMailerException( 'Attach: El nombre del destinatario no es correcto.' );
@@ -172,4 +176,4 @@ class Mailer {
         }
 
     }
-}
+};

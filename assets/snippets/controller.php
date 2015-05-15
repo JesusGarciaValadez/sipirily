@@ -43,6 +43,44 @@ if ( !empty( $_GET['action'] ) )
                 $sended                     = SenderEmail::send( $parameters, $template, $subject, $sender, $cc );
                 $data                       = json_encode ( $sended );
                 break;
+            case 'jobForm':
+                $parameters[ 'sucursal' ]   = trim( $_POST[ 'branch' ] );
+                $parameters[ 'nombre' ]     = trim( $_POST[ 'name' ] );
+                $parameters[ 'correo' ]     = trim( $_POST[ 'mail' ] );
+                $curriculumFile = '';
+                if ( !empty( $_FILES[ 'curriculum' ][ 'size' ] ) )
+                {
+                    if ( $_FILES[ 'curriculum' ][ 'type' ] === 'application/msword' || $_FILES[ 'curriculum' ][ 'type' ] === 'application/pdf')
+                    {
+                        $ext            = ( $_FILES[ 'curriculum' ][ 'type' ] === 'application/msword' ) ? 'docx' : 'pdf';
+                        $curriculumFile['name'] = sprintf( './uploads/%s.%s', sha1_file($_FILES['curriculum']['tmp_name']), $ext );
+                        if ( !move_uploaded_file( $_FILES['curriculum']['tmp_name'], $curriculumFile['name'] ) ) {
+                            throw new RuntimeException('Failed to move uploaded file.');
+                        }
+                        else
+                        {
+                            $parameters[ 'curriculum' ] = $_FILES[ 'curriculum' ];
+                        }
+                    }
+                    else
+                    {
+                        header('Location: ' . SITE_URL . DIRECTORY_SEPARATOR . 'error-con-tipo-de-archivo' );
+                    }
+                }
+                else
+                {
+                    header('Location: ' . SITE_URL . DIRECTORY_SEPARATOR . 'error-con-tamano-de-archivo' );
+                }
+                $template                   = 'curriculum.tpl';
+                $subject                    = 'Hay un nuevo correo con curriculum desde Sipirily.com';
+                $sender                     = 'contacto@sipirily.com';
+                $cc                         =   [
+                                                    [ 'mail'  => 'jesus.garciav@me.com',
+                                                      'name'  => 'Jesús' ]
+                                                ];
+                $sended                     = SenderEmail::sendCurriculum( $parameters, $template, $subject, $sender, $cc, $curriculumFile );
+                $data                       = json_encode ( $sended );
+                break;
         }
         echo $data;
     }
