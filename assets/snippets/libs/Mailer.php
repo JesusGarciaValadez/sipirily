@@ -112,7 +112,7 @@ class Mailer {
         }
     }
 
-    public function addAttach( $atach = array() ) {
+    public static function addAttach( $atach = array() ) {
 
         if( empty( $atach ) )
             self::throwMailerException( 'Attach: Es necesario que agregues cuando menos un archivo.' );
@@ -122,19 +122,19 @@ class Mailer {
             {
                 self::throwMailerException( 'Attach: La lista de archivos no está en el formato correcto.' );
             }
-            $filetype = ( !empty( $file['file'] ) ) ? 'file' : 'name';
-            //var_dump($file[$filetype]);
-
-            $att = $file[$filetype];
+            $att = $file['file'];
 
             if( ( $nombre = FilterInput::FilterValue( $file['name'] , 'string' , true ) ) === false )
                 self::throwMailerException( 'Attach: El nombre del destinatario no es correcto.' );
 
-            $this->_mailer->AddAttachment( $att , $nombre );
+            $type = $file[ 'type' ];
+
+            self::$instance->AddAttachment( $att , $nombre, 'binary', $type );
         }
     }
 
-    public function send() {
+    public function send()
+    {
 
         if ( $this->_mailer->Send() ) {
 
@@ -146,12 +146,14 @@ class Mailer {
         }
     }
 
-    private static function throwMailerException ( $message ) {
+    private static function throwMailerException ( $message )
+    {
 
         throw new Exception( $message , 5810  );
     }
 
-    public static function sendMail( $subject = '', $body = '', $to = array(), $cc = array(), $bcc = array(), $att = array() ) {
+    public static function sendMail( $subject = '', $body = '', $to = array(), $cc = array(), $bcc = array(), $att = array() )
+    {
 
         try {
 

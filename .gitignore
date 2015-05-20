@@ -15,3 +15,5 @@ setup*
 *.sublime-*
 config.codekit
 home.sprweb
+assets/snippets/uploads
+assets/snippets/libs/pp.config.ini

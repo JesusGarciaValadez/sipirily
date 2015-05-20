@@ -1343,7 +1343,7 @@ class PHPMailer {
    */
   public function AddAttachment($path, $name = '', $encoding = 'base64', $type = 'application/octet-stream') {
     try {
-      if ( !@is_file($path) ) {
+      if ( !is_file($path) ) {
         throw new phpmailerException($this->Lang('file_access') . $path, self::STOP_CONTINUE);
       }
       $filename = basename($path);
@@ -1389,7 +1389,8 @@ class PHPMailer {
    * @access private
    * @return string
    */
-  private function AttachAll() {
+  private function AttachAll()
+  {
     // Return text of body
     $mime = array();
     $cidUniq = array();
@@ -1456,7 +1457,8 @@ class PHPMailer {
    * @access private
    * @return string
    */
-  private function EncodeFile($path, $encoding = 'base64') {
+  private function EncodeFile($path, $encoding = 'base64')
+  {
     try {
       if (!is_readable($path)) {
         throw new phpmailerException($this->Lang('file_open') . $path, self::STOP_CONTINUE);

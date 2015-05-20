@@ -53,13 +53,19 @@ if ( !empty( $_GET['action'] ) )
                     if ( $_FILES[ 'curriculum' ][ 'type' ] === 'application/msword' || $_FILES[ 'curriculum' ][ 'type' ] === 'application/pdf')
                     {
                         $ext            = ( $_FILES[ 'curriculum' ][ 'type' ] === 'application/msword' ) ? 'docx' : 'pdf';
-                        $curriculumFile['name'] = sprintf( './uploads/%s.%s', sha1_file($_FILES['curriculum']['tmp_name']), $ext );
-                        if ( !move_uploaded_file( $_FILES['curriculum']['tmp_name'], $curriculumFile['name'] ) ) {
+                        $curriculumFile['file'] = sprintf( './uploads/%s.%s', sha1_file($_FILES['curriculum']['tmp_name']), $ext );
+                        $curriculumFile['name'] = $curriculumFile['file'];
+
+                        $curriculumFile['type'] = ( $_FILES[ 'curriculum' ][ 'type' ] === 'application/msword' ) ? 'application/msword' : 'application/pdf';
+                        if ( !move_uploaded_file( $_FILES['curriculum']['tmp_name'], $curriculumFile['name'] ) )
+                        {
                             throw new RuntimeException('Failed to move uploaded file.');
                         }
                         else
                         {
-                            $parameters[ 'curriculum' ] = $_FILES[ 'curriculum' ];
+                            {
+                                $parameters[ 'curriculum' ] = $_FILES[ 'curriculum' ];
+                            }
                         }
                     }
                     else
@@ -71,15 +77,24 @@ if ( !empty( $_GET['action'] ) )
                 {
                     header('Location: ' . SITE_URL . DIRECTORY_SEPARATOR . 'error-con-tamano-de-archivo' );
                 }
-                $template                   = 'curriculum.tpl';
-                $subject                    = 'Hay un nuevo correo con curriculum desde Sipirily.com';
-                $sender                     = 'contacto@sipirily.com';
-                $cc                         =   [
-                                                    [ 'mail'  => 'jesus.garciav@me.com',
-                                                      'name'  => 'Jesús' ]
-                                                ];
-                $sended                     = SenderEmail::sendCurriculum( $parameters, $template, $subject, $sender, $cc, $curriculumFile );
-                $data                       = json_encode ( $sended );
+                $template   = 'curriculum.tpl';
+                $subject    = 'Hay un nuevo correo con curriculum desde Sipirily.com';
+                $sender     = 'contacto@sipirily.com';
+                $cc         =   [
+                                    [ 'mail'  => 'jesus.garciav@me.com',
+                                      'name'  => 'Jesús' ]
+                                ];
+                $sended     = SenderEmail::sendCurriculum( $parameters, $template, $subject, $sender, $cc, $curriculumFile );
+                if ( $sended[ 'success' ] === 'true' )
+                {
+                    //unlink( $curriculumFile[ 'file' ] );
+                    //header( 'Location: http://sipirily.app/'
+                    die();
+                }
+                else
+                {
+                    header('Location: ' . SITE_URL . DIRECTORY_SEPARATOR . 'error-con-envio-de-formulario' );
+                }
                 break;
         }
         echo $data;
