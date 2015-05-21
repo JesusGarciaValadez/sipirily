@@ -348,6 +348,14 @@
             } );
         }
 
+        // Centrar el navegador del carrusel principal del home
+        if ( $( '.wrapper-gallery .gallery .scrollable .navigator' ).exists() ) {
+            var _width      = $( '.wrapper-gallery .gallery .navigator' ).width();
+            var _marginLeft = _width / 2;
+
+            $( '.wrapper-gallery .gallery .navigator' ).css( 'marginLeft', -_marginLeft );
+        }
+
         /**
          *
          *  Anchor the menu when the screen is up to certain Y coord while doing scroll

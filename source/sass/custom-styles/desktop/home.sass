@@ -1,6 +1,6 @@
 .home
     .wrapper-gallery
-        background: url("../img/home/carrusel/fondo.png") no-repeat scroll center -50px transparent
+        //background: url("../img/home/carrusel/fondo.png") no-repeat scroll center -50px transparent
         height: 550px
         .gallery
             height: 100%
@@ -10,30 +10,43 @@
                 position: relative
                 .items
                     display: flex
-                    height: 75%
+                    height: 100%
                     position: absolute
                     width: 2000em
                     article
                         align-self: stretch
                         height: 100%
                         text-align: center
-                        width: 960px
+                        position: relative
+                        width: 100vw
+                        img
+                            display: block
+                            left: 0
+                            position: absolute
+                            top: 0
+                            width: 100vw
+                            z-index: 0
                         h1
                             @include font-mask( normal, em( 55, 16 ), 1.5em, $helvetica, $white-color )
                             background-color: rgba( 0, 0, 0, 0.5 )
                             display: block
                             margin: 120px auto
+                            position: relative
                             text-align: center
+                            width: 93.75vw
+                            z-index: 1
                         a
                             @include font-mask( normal, em( 13, 16 ), 1.5em, $helvetica, $white-color )
                             cursor: pointer
                             display: inline-block
                             margin: 0 auto
                             text-decoration: none
+                            position: relative
+                            z-index: 1
                 .navigator
                     box-sizing: border-box
                     display: flex
-                    left: 41.5%
+                    left: 50%
                     position: absolute
                     top: 85%
                     a
