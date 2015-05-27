@@ -85,6 +85,23 @@
             } );
 
             $('ul.tabs').tabs('div.panes > div');
+
+            $('.panes .photo .thumbnails, .panes .video .thumbnails').on('click', 'li', function(e){
+                var _dataThumbnail = $(e.currentTarget).data('thumbnail')-1;
+                var _parent = ($(e.currentTarget).closest('.photo').hasClass('photo'))?"photo":"video";
+                var _scrollable;
+
+                if (_parent === 'photo') {
+                    _scrollable = $('.panes .photo').data('scrollable');
+                } else {
+                    _scrollable = $('.panes .video').data('scrollable');
+                }
+                _scrollable.seekTo(_dataThumbnail, 150);
+            });
+            // .panes .photo .items figure img
+            // .panes .photo .thumbnails li
+            // .panes .video .items div
+            // .panes .video .thumbnails li
         }
 
         if ($('.character-gallery').exists()) {
