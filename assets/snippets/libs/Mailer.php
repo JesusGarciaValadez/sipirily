@@ -26,7 +26,7 @@ class Mailer {
         $this->_mailer->From        = $config['mail_service']['sender_mail']  ;
         $this->_mailer->FromName    = $config['mail_service']['sender_name'] ;
 
-        //$this->_mailer->SMTPDebug   = true;
+        $this->_mailer->SMTPDebug   = true;
         $this->_mailer->ClearAddresses();
     }
 
