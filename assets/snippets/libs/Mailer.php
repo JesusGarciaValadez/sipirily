@@ -8,7 +8,8 @@ class Mailer {
     private $_mailer ;
     private static $instance ;
 
-    private function __construct( ) {
+    private function __construct( )
+    {
         $config = Common::getConfig();
         $port = intval( $config['mail_service']['port'] );
 
@@ -26,11 +27,12 @@ class Mailer {
         $this->_mailer->From        = $config['mail_service']['sender_mail']  ;
         $this->_mailer->FromName    = $config['mail_service']['sender_name'] ;
 
-        $this->_mailer->SMTPDebug   = true;
+        $this->_mailer->SMTPDebug   = false;
         $this->_mailer->ClearAddresses();
     }
 
-    public function addSubject ( $subject = '' ) {
+    public function addSubject ( $subject = '' )
+    {
 
         if(  ( $subject = FilterInput::FilterValue( $subject , 'string' , true ) ) === false )
             self::throwMailerException( 'Es necesario que agregues el asunto del correo.' );
@@ -38,42 +40,44 @@ class Mailer {
         $this->_mailer->Subject = $subject  ;
     }
 
-    public function addBody ( $body = '' ) {
+    public function addBody ( $body = '' )
+    {
 
         if( empty( $body ) )
             self::throwMailerException( 'Es necesario que agregues el cuerpo del correo.' );
 
         $this->_mailer->Body = $body;
-
     }
 
-    public function addTo( $to = array() ) {
+    public function addTo( $to = array() )
+    {
 
-        if ( empty( $to ) ) {
-
+        if ( empty( $to ) )
+        {
             self::throwMailerException( 'TO: Es necesario que agregues cuando menos un destinatario' );
         }
 
-        foreach ( $to as $dest ) {
-
-            if ( empty( $dest['mail'] ) || empty( $dest['name'] ) ) {
-
+        foreach ( $to as $dest )
+        {
+            if ( empty( $dest['mail'] ) || empty( $dest['name'] ) )
+            {
                 self::throwMailerException( 'TO: La lista de destinatarios no está en el formato correcto. ' );
             }
-            if ( ( $mail = FilterInput::FilterValue( $dest['mail'] , 'email' , true ) ) === false ) {
-
+            if ( ( $mail = FilterInput::FilterValue( $dest['mail'] , 'email' , true ) ) === false )
+            {
                 self::throwMailerException( 'TO: El correo proporcionado no es válido.' );
             }
 
-            if ( ( $nombre = FilterInput::FilterValue( $dest['name'] , 'string' , true ) ) === false ) {
-
+            if ( ( $nombre = FilterInput::FilterValue( $dest['name'] , 'string' , true ) ) === false )
+            {
                 self::throwMailerException( 'TO: El nombre del destinatario no es correcto.' );
             }
             $this->_mailer->AddAddress( $mail , $nombre );
         }
     }
 
-    public function addCopy( $cc = array() ) {
+    public function addCopy( $cc = array() )
+    {
 
         if( empty( $cc ) )
             self::throwMailerException( 'CC: Es necesario que agregues cuando menos un destinatario.' );
@@ -93,7 +97,8 @@ class Mailer {
         }
     }
 
-    public function addBackCopy( $bcc = array() ) {
+    public function addBackCopy( $bcc = array() )
+    {
         if( empty( $bcc ) )
             self::throwMailerException( 'BCC: Es necesario que agregues cuando menos un destinatario.' );
 
@@ -112,8 +117,8 @@ class Mailer {
         }
     }
 
-    public static function addAttach( $atach = array() ) {
-
+    public function addAttach( $atach = array() )
+    {
         if( empty( $atach ) )
             self::throwMailerException( 'Attach: Es necesario que agregues cuando menos un archivo.' );
 
@@ -129,7 +134,7 @@ class Mailer {
 
             $type = $file[ 'type' ];
 
-            self::$instance->AddAttachment( $att , $nombre, 'binary', $type );
+            $this->_mailer->AddAttachment( $att , $nombre, 'binary', $type );
         }
     }
 
@@ -154,9 +159,8 @@ class Mailer {
 
     public static function sendMail( $subject = '', $body = '', $to = array(), $cc = array(), $bcc = array(), $att = array() )
     {
-
-        try {
-
+        try
+        {
             self::$instance = new Mailer();
             self::$instance->addSubject( $subject );
             self::$instance->addBody( $body );
@@ -171,8 +175,9 @@ class Mailer {
                 self::$instance->addAttach( $att );
 
             return self::$instance->send() ;
-        } catch ( phpmailerException $e ) {
-
+        }
+        catch ( phpmailerException $e )
+        {
             self::throwMailerException( $e->getMessage() );
             return false;
         }

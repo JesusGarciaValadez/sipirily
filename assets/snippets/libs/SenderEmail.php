@@ -136,7 +136,7 @@ class SenderEmail {
                 $tpl  = ParserTemplate::parseTemplate( $template, $vars );
                 $_cc  = $cc;
 
-                if ( Mailer::sendMail( $subject, $tpl, $to, [], $_cc, [], [ $file ] ) )
+                if ( Mailer::sendMail( $subject, $tpl, $to, [], $_cc, [ $file ] ) )
                 {
                     $response       =   [ 'success' => 'true',
                                           'message' => utf8_encode( 'Muchas gracias por contestar esta encuesta.' )

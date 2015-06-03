@@ -63,9 +63,7 @@ if ( !empty( $_GET['action'] ) )
                         }
                         else
                         {
-                            {
-                                $parameters[ 'curriculum' ] = $_FILES[ 'curriculum' ];
-                            }
+                            $parameters[ 'curriculum' ] = $_FILES[ 'curriculum' ];
                         }
                     }
                     else
@@ -87,9 +85,9 @@ if ( !empty( $_GET['action'] ) )
                 $sended     = SenderEmail::sendCurriculum( $parameters, $template, $subject, $sender, $cc, $curriculumFile );
                 if ( $sended[ 'success' ] === 'true' )
                 {
-                    //unlink( $curriculumFile[ 'file' ] );
-                    //header( 'Location: http://sipirily.app/'
-                    die();
+                    unlink( $curriculumFile[ 'file' ] );
+                    header( 'Location: ' . SITE_URL . DIRECTORY_SEPARATOR );
+                    //die();
                 }
                 else
                 {
